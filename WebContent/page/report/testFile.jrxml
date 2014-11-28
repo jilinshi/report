@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testFile" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d08388d0-28f3-4e6f-a325-e6a938e65967">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="66"/>
+	<parameter name="fid" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="onepic" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select familyid,
+       familyno,
+       masterid,
+       mastername,
+       paperid,
+       percount,
+       salcount,
+       operstate,
+       on_no,
+       famsort,
+       accounts,
+       onallname,
+       fde,
+       fdefamilyno,
+       fdename,
+       f_income,
+       f_familyid,
+       xm_jtcy0,
+       sfzh_jtcy0,
+       rel0,
+       res0,
+       body0,
+       xm_jtcy1,
+       sfzh_jtcy1,
+       rel1,
+       res1,
+       body1,
+       xm_jtcy2,
+       sfzh_jtcy2,
+       rel2,
+       res2,
+       body2,
+       xm_jtcy3,
+       sfzh_jtcy3,
+       rel3,
+       res3,
+       body3,
+       xm_jtcy4,
+       sfzh_jtcy4,
+       rel4,
+       res4,
+       body4,
+       qx,
+       jd,
+       sq,
+       fm_sex,
+       fmage
+  from tempfamiyinfo where f_familyid=$P{fid}]]>
+	</queryString>
+	<field name="FAMILYID" class="java.lang.String"/>
+	<field name="FAMILYNO" class="java.lang.String"/>
+	<field name="MASTERID" class="java.lang.String"/>
+	<field name="MASTERNAME" class="java.lang.String"/>
+	<field name="PAPERID" class="java.lang.String"/>
+	<field name="PERCOUNT" class="java.math.BigDecimal"/>
+	<field name="SALCOUNT" class="java.math.BigDecimal"/>
+	<field name="OPERSTATE" class="java.lang.String"/>
+	<field name="ON_NO" class="java.lang.String"/>
+	<field name="FAMSORT" class="java.lang.String"/>
+	<field name="ACCOUNTS" class="java.lang.String"/>
+	<field name="ONALLNAME" class="java.lang.String"/>
+	<field name="FDE" class="java.lang.String"/>
+	<field name="FDEFAMILYNO" class="java.lang.String"/>
+	<field name="FDENAME" class="java.lang.String"/>
+	<field name="F_INCOME" class="java.math.BigDecimal"/>
+	<field name="F_FAMILYID" class="java.lang.String"/>
+	<field name="XM_JTCY0" class="java.lang.String"/>
+	<field name="SFZH_JTCY0" class="java.lang.String"/>
+	<field name="REL0" class="java.lang.String"/>
+	<field name="RES0" class="java.lang.String"/>
+	<field name="BODY0" class="java.lang.String"/>
+	<field name="XM_JTCY1" class="java.lang.String"/>
+	<field name="SFZH_JTCY1" class="java.lang.String"/>
+	<field name="REL1" class="java.lang.String"/>
+	<field name="RES1" class="java.lang.String"/>
+	<field name="BODY1" class="java.lang.String"/>
+	<field name="XM_JTCY2" class="java.lang.String"/>
+	<field name="SFZH_JTCY2" class="java.lang.String"/>
+	<field name="REL2" class="java.lang.String"/>
+	<field name="RES2" class="java.lang.String"/>
+	<field name="BODY2" class="java.lang.String"/>
+	<field name="XM_JTCY3" class="java.lang.String"/>
+	<field name="SFZH_JTCY3" class="java.lang.String"/>
+	<field name="REL3" class="java.lang.String"/>
+	<field name="RES3" class="java.lang.String"/>
+	<field name="BODY3" class="java.lang.String"/>
+	<field name="XM_JTCY4" class="java.lang.String"/>
+	<field name="SFZH_JTCY4" class="java.lang.String"/>
+	<field name="REL4" class="java.lang.String"/>
+	<field name="RES4" class="java.lang.String"/>
+	<field name="BODY4" class="java.lang.String"/>
+	<field name="QX" class="java.lang.String"/>
+	<field name="JD" class="java.lang.String"/>
+	<field name="SQ" class="java.lang.String"/>
+	<field name="FM_SEX" class="java.lang.String"/>
+	<field name="FMAGE" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="751" splitType="Immediate">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement x="410" y="61" width="100" height="20" uuid="f3d2b5d7-1428-4b1f-80bc-f6401a1ef70a"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[编号：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="113" width="555" height="30" uuid="75520312-97aa-407a-b125-28ff4252272f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="20" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[吉林省城乡居民临时救助审批申请表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="335" width="489" height="24" uuid="cb6e7b06-ba01-4567-8550-e02100173ac4"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[_________区__________乡镇（街道）____________社区（村）]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="545" width="78" height="28" uuid="efc25de4-58c7-47a5-baf6-a4dbbcc5204c"/>
+				<textElement verticalAlignment="Bottom" markup="none">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[户主姓名：________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="583" width="80" height="26" uuid="68ecf88d-5727-4d66-a679-1efd15c256de">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[联系方式：________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="624" width="260" height="38" uuid="aa87e95e-75ee-4740-a7c7-7d14c4507a35">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[审批时间：     年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="686" width="554" height="30" uuid="b1e0d070-d562-4b25-a69d-946429330f4f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="14"/>
+				</textElement>
+				<text><![CDATA[吉 林 省 民 政 厅 监 制]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="335" width="110" height="24" uuid="a773343d-6a09-4344-ba73-318570640e47"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QX}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="228" y="573" width="182" height="1" uuid="0f9c1b39-788d-4a9c-a67e-2872a15f02c1"/>
+			</line>
+			<textField>
+				<reportElement x="227" y="545" width="180" height="28" uuid="a875904d-35a0-408d-b010-8ba2e1b6eb59"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MASTERNAME}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="230" y="608" width="182" height="1" uuid="1501c3e6-2b34-408f-8d38-1fb4cc77009e"/>
+			</line>
+			<textField>
+				<reportElement x="160" y="335" width="90" height="24" uuid="093cbcf4-c985-4420-a44c-53c2bfaa4e25"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="335" width="105" height="24" uuid="360f52e7-fe1c-4d69-bdea-694ca9b9bd93"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SQ}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="751">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="30" width="555" height="60" uuid="79cda534-b49a-460a-a4d8-1cc34f0771b4"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="70" y="131" width="101" height="30" uuid="21850100-f749-402c-be27-610781446fa0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MASTERNAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="131" width="30" height="90" uuid="827e6392-79d0-4407-a5ec-bbc291f84bac"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10" rightIndent="0"/>
+				</textElement>
+				<text><![CDATA[户主情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="131" width="30" height="30" uuid="e2c35752-15f4-452a-a828-df682454809e">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="161" width="90" height="30" uuid="d3766e63-3495-4136-8f68-f44f48972ee6">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[保障对象类别]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="131" width="29" height="30" uuid="72cc934f-833e-4b0c-b3a0-09df2f5a16ed">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[性别]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="161" width="100" height="30" uuid="ad1f8267-c019-4f08-9a25-fff97e9c78b6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{OPERSTATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="240" y="131" width="30" height="30" uuid="383bf9c5-db27-401e-91c9-80586d156d59">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[年龄]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="131" width="40" height="30" uuid="aaaaea97-33b8-41e5-949c-5b69edb7fa87">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FM_SEX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="131" width="40" height="30" uuid="fd278c03-c57e-4cb6-9fde-f803a893aebb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FMAGE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="230" y="161" width="80" height="30" uuid="90e2c641-1058-4cd3-8ee5-402cb427a51b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[保障编号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="131" width="30" height="30" uuid="6b8cf3a5-3ebd-4299-b672-e8e1202404c0">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[证件号码]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="161" width="164" height="30" uuid="9dab9e9c-b848-4d6f-945d-47977f43193e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FAMILYNO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="131" width="134" height="30" uuid="af95e7df-098d-49b8-9537-3f07fe848103">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PAPERID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="40" y="191" width="90" height="30" uuid="60400bd3-d64f-4472-a536-3cb3e07d40ef">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[户口所在地]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="221" width="30" height="150" uuid="f4b92ade-6ae6-486f-b2bd-ff0c52d0ef48"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[家庭成员情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="221" width="90" height="30" uuid="fe53e052-c2f2-4853-a0a1-aadb62a8e22a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[与户主关系]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="40" y="251" width="90" height="30" uuid="cf04b790-ccd0-4e99-acd2-793a4fd7b0c8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{REL1}==null) ? "":$F{REL1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="221" width="70" height="30" uuid="18b3df11-0bec-47b6-b99a-40eb4852afdd">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[姓名]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="251" width="70" height="30" uuid="052810fc-f749-4678-900e-d6abc414df3f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{XM_JTCY1}==null) ? "":$F{XM_JTCY1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="221" width="110" height="30" uuid="1a43f8d7-4bbe-4d11-9451-22a119c9a968">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[证件号码]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="251" width="110" height="30" uuid="b868b694-bd8b-4392-bdef-5dc0b4560b47">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{SFZH_JTCY1}==null) ? "":$F{SFZH_JTCY1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="221" width="80" height="30" uuid="43fffca1-497c-418a-b221-0ee21b9cc9d3">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[从事职业或工作]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="251" width="80" height="30" uuid="3d0e493b-b270-4185-b6fc-10a4ba7178d7">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="390" y="221" width="39" height="30" uuid="b0747480-d22e-47fc-8df0-6b20cb032c7d">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[收入情况]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="251" width="39" height="30" uuid="955c5972-2e8f-4a4e-acc5-d5fa17d7bdc5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="429" y="221" width="45" height="30" uuid="e987e3a8-8303-49fe-a7f7-a5280fe4513b">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[户口性质]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="251" width="45" height="30" uuid="6bfe2a20-ae99-4a5d-ad9e-b01e7b941c8c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{RES1}==null)?"":$F{RES1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="474" y="221" width="72" height="30" uuid="4d16b9c9-355a-433d-b6db-baa84dc8457a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[身体状况]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="474" y="251" width="72" height="30" uuid="ae8db6d8-d654-4cd1-bf7d-1e719b50a907">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{BODY1}==null)?"":$F{BODY1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="281" width="72" height="30" uuid="7a85f47d-bb69-4f85-97fa-804b8773756e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{BODY2}==null)?"":$F{BODY2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="311" width="72" height="30" uuid="e23fe98a-a85d-4c55-962d-11e5819b9c7a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{BODY3}==null)?"":$F{BODY3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="341" width="72" height="30" uuid="30b9bd1d-73ce-4d3c-8f1b-49f64c53d8a6">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{BODY4}==null)?"":$F{BODY4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="341" width="45" height="30" uuid="786dd024-0c5d-4e3d-ac14-b143f614f070">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{RES4}==null)?"":$F{RES4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="311" width="45" height="30" uuid="d12bfb80-04d8-4b40-899f-9a5f8dab09ab">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{RES3}==null)?"":$F{RES3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="281" width="45" height="30" uuid="e446133c-e0f2-4a95-9eba-540333beb557">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{RES2}==null)?"":$F{RES2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="281" width="39" height="30" uuid="467df730-2d08-47a5-b390-ecdf50d36e2b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="311" width="39" height="30" uuid="625b6233-6022-4a71-ac93-850e13c84be1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="341" width="39" height="30" uuid="8b008261-f638-4620-9795-eb9b510d92a1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="341" width="80" height="30" uuid="f8837796-b175-4c2e-89be-66ae184edcfb">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="311" width="80" height="30" uuid="d74d66b1-e3e6-419f-8527-6be3411b7138">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="281" width="80" height="30" uuid="ef7a095a-6c79-4c4f-9798-8c29d9ae1858">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="281" width="110" height="30" uuid="8d2b0ec3-5f53-4177-ab48-b21f01954635">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{SFZH_JTCY2}==null) ? "":$F{SFZH_JTCY2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="311" width="110" height="30" uuid="d031c931-9688-4873-bff9-7ae0cdee562d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{SFZH_JTCY3}==null) ? "":$F{SFZH_JTCY3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="341" width="110" height="30" uuid="58e11b28-6d39-493c-bb15-5c204f30f20d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{SFZH_JTCY4}==null) ? "":$F{SFZH_JTCY4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="341" width="70" height="30" uuid="84748cda-c170-4f4d-beff-c82d8ecd1cc3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{XM_JTCY4}==null) ? "":$F{XM_JTCY4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="311" width="70" height="30" uuid="37e59144-3328-45fd-bae0-b97c131bda90">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{XM_JTCY3}==null) ? "":$F{XM_JTCY3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="281" width="90" height="30" uuid="8c69d7a4-14fd-4284-9cb8-866ae878da22">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{REL2}==null) ? "":$F{REL2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="311" width="90" height="30" uuid="0b0bde3e-a5f4-410d-b6c3-d22e28227799">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{REL3}==null) ? "":$F{REL3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="341" width="90" height="30" uuid="85b0a790-c3b7-4cb8-bc82-12010c88419b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{REL4}==null) ? "":$F{REL4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="371" width="30" height="60" uuid="39d72e84-5111-4e40-8bda-20b0e1aa1def"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[住房情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="371" width="90" height="30" uuid="dfde6ecc-fd19-4956-9798-f00d68f58695">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[自有/租借]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="401" width="90" height="30" uuid="2c32e1f7-9071-447d-a06a-144a9ab7c18a">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[房屋面积]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="401" width="55" height="30" uuid="8d84b47a-dcfb-4196-8d76-43f5aa249c24">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="371" width="70" height="30" uuid="0758e111-0447-4dda-b5cd-74886ac847c0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="371" width="50" height="30" uuid="1c879e03-38d1-4960-b3a5-ab871c9ed21c">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[产权人]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="401" width="50" height="30" uuid="7189e741-2ce1-48b1-b71e-9c4afe08f425">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[月租金]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="371" width="60" height="30" uuid="f5f42c50-aec8-4fbb-8636-1cfb1c7d29d0">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="295" y="401" width="14" height="30" uuid="9556f93c-c41a-44ac-9c57-3f6a91b4a2b2">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[元]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="371" width="119" height="30" uuid="59829c1c-ab80-440c-a8cd-5559c150c756">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[户主与产权人关系]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="401" width="119" height="30" uuid="a12737e0-c87d-4e75-ba32-5b62330eb94f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[房主联系电话]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="429" y="371" width="117" height="30" uuid="86d37df9-f6c3-4100-938e-6939fe433ca2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="401" width="117" height="30" uuid="022544f5-cdf2-4e5f-b796-317879ffc9e4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="170" y="432" width="221" height="30" uuid="d5ece660-6649-4802-a6d5-77f53959740f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="16" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[基本信息填写说明]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="461" width="500" height="19" uuid="51e7474f-337a-419e-9d2f-2e4187cb4ecc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1、表中有代码的项目直接填写对应代码。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="481" width="500" height="19" uuid="c2ca6816-8291-46f2-aa88-3903888cee07"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[2、表中“年龄”应按周岁填列。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="501" width="500" height="40" uuid="5f5e76c0-725d-490e-9a26-99b787cc9046"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[3、表中“保障对象类别”应在“1城市低保对象、2城市分类施保对象、3城市低收入家庭、4农村低保对象、5农村重点保障对象、6农村低保边缘对象”中选择代码填列。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="541" width="221" height="30" uuid="6e099ad1-24e2-430d-b140-08d8153a16d5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="16" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[申请救助诚信承诺书]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="572" width="500" height="80" uuid="ad418d18-a69b-40c3-9138-b78651314e6e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[    本人因家庭生活困难，特申请临时救助。本人承诺在本表中所填列的全部内容及所提供的全部证明材料均真实、可靠、绝无虚假、欺骗和隐瞒，如经管理审批机关及其办事机构核查存在不实之处，愿承担一切后果并接受一切处罚。													申请人（签字并按手印）：                                                                     										年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="653" width="280" height="30" uuid="90ceeb6c-9055-4aa7-b143-fe255d62cfba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="16" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[家庭收入财产及有关信息核查委托书]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="682" width="500" height="62" uuid="e7b84e97-603e-4c7d-9863-cf7de660239c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[    为了验证本人所提供的全部证明材料均真实、可靠，绝无虚假、欺骗和隐瞒，同意社会救助管理审批机关及其办事机构与有关部门对本人及家庭收入、财产住房信息进行核查。								委托人（签字并按手印）：                                                                    										年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="91" width="100" height="30" uuid="7cd9ad42-3981-45f5-91fc-73018defe008"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[基 本 信 息]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="250" y="401" width="45" height="30" uuid="bc3a9e4e-aae7-4336-ad2a-35904b06a827">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="185" y="401" width="14" height="30" uuid="6a6469d4-b4d2-4271-96b8-07a68e5f7614">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[m2]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="191" width="69" height="30" uuid="75325fe6-ff79-4431-86af-c7dc64f0056a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="191" width="81" height="30" uuid="df56b4aa-c2ef-4dc6-b1fa-7ea5e555cec1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{JD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="191" width="48" height="30" uuid="960b2536-dcda-4fd2-8345-d8059e298233">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SQ}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="328" y="191" width="72" height="30" uuid="c2783227-f8c1-4d42-ae51-8b8f28dc0c57">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[组]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="191" width="74" height="30" uuid="117ec28c-299e-4c0e-968b-6f6601539d7e">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[号]]></text>
+			</staticText>
+			<image>
+				<reportElement x="474" y="131" width="72" height="90" uuid="31c4b20c-c145-4ece-9827-aabdf232db2a"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{onepic}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="130" y="281" width="70" height="30" uuid="51e03dc9-1ed5-4c83-bad4-469782d66d54">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{XM_JTCY2}==null) ? "":$F{XM_JTCY2}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="751">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="30" width="555" height="60" uuid="24d10b46-c1c0-4b6a-ad30-24ea2d2e9d98"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="91" width="60" height="160" uuid="1a35b32a-c028-4990-980a-67e3bd5c8b91">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[居委会调查意见]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="110" width="476" height="20" uuid="759dc30c-c455-4a84-b29a-05e0ad05ffde"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[经调查和评议，该家庭总人口  人，家庭月总收入    元，月人均收入    元。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="130" width="476" height="20" uuid="94aa9313-44c7-456a-a913-f5154c02c8b9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[其中            有材料证明，符合临时救助对象条件，同意上报街道办事处。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="91" width="476" height="160" uuid="713a065f-d3f9-493f-8eb1-aaf16c587df2"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="176" width="476" height="20" uuid="6c510a19-0542-43b3-a981-a642b7d7de72"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[  经办人（签字）：                    负责人（签字）：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="218" width="476" height="20" uuid="15637c1d-1b02-43af-91aa-7aa8f5ce36df"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[             居委会（盖章）               日期：     年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="271" width="476" height="37" uuid="039f99c7-3051-4e3c-89e5-14f135d90db9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[经审核，该家庭符合临时救助条件，建议给予该家庭临时救助      元，同意上报区民政局。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="251" width="476" height="160" uuid="7e3cd05c-d97a-4228-9ac2-68b9b1860a67"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="337" width="476" height="20" uuid="7aa862ba-59ff-4981-9d85-9b865ad3cbd4"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[  经办人（签字）：                  分管领导（签字）：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="379" width="476" height="20" uuid="3b488d0e-9905-439b-adbf-6d99b6e7a4df"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[             街道办事处（盖章）           日期：     年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="251" width="60" height="160" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[街道办事处审核意见]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="411" width="60" height="160" uuid="703e856f-b3fe-472a-b6f0-b9bd96cb6f18">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[区民政局审批意见]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="432" width="476" height="37" uuid="7cd79581-eac5-4d65-a7aa-5bd0d7ffa267"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[经审核，该家庭符合临时救助条件，同意给予该家庭临时救助      元，由我局负责发放。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="411" width="476" height="160" uuid="b0e68fd0-c7d8-4e12-80fb-839c4a411269"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="498" width="476" height="20" uuid="c235ebdf-01b6-412d-990c-6c3f14c4620a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[  经办人：               审核人：              审批人：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="540" width="476" height="20" uuid="25443c2d-afec-4058-9ff4-fc5c17926b2c"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[               区民政局（盖章）           日期：     年    月    日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="571" width="60" height="169" uuid="9bcfcefd-f17f-409b-be82-01612c5992ec">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[申请人领取临时救助情况]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="571" width="476" height="169" uuid="cb0aac86-585a-47e2-b5cc-b52f2ff2d7eb"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="580" width="476" height="16" uuid="b395fb63-8ad5-484a-9d47-026e5d70ac17"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[本人已通过                （现场/银行）领取临时救助           元。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="607" width="476" height="20" uuid="01fd8932-9bcf-489c-b269-1af8aea56b2b"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[ 申请人或受委托人签字（盖章）：        领取日期：     年    月    日 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="628" width="476" height="20" uuid="b475d9a8-fad3-4de3-a840-00ae456bc8a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="648" width="476" height="20" uuid="96664db0-95fc-48a6-96de-c414b21ce79a"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[临时救助申请人账户信息：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="676" width="476" height="20" uuid="aa34dba2-862f-4599-8e76-96be3428849c"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[账号：                                账户名：]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="710" width="476" height="20" uuid="88b94170-dc26-4f8e-8786-323346380ad9"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[账号：                                账户名：]]></text>
+			</staticText>
+		</band>
+		<band height="751">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="-1" y="30" width="555" height="60" uuid="614446a9-790e-4631-8bf3-883b185a9139"/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="91" width="240" height="50" uuid="012d574b-f9bc-4f63-b05d-055a23d59ece"/>
+				<box>
+					<topPen lineWidth="0.2"/>
+					<leftPen lineWidth="0.2"/>
+					<bottomPen lineWidth="0.2"/>
+					<rightPen lineWidth="0.2"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[证    明    材    料    粘    贴    处]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="142" width="180" height="30" uuid="4efee931-76e1-4b2b-bf28-1f842ed41772"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[证    明    材    料]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="172" width="260" height="30" uuid="81884c61-018f-45bf-81ef-96241d2b1aba"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[材    料    名    称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="172" width="120" height="30" uuid="284b8da2-3164-479d-8dc2-e0886acbbfcb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[页    数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="202" width="520" height="30" uuid="bbfebc6a-208a-4de0-b834-81b85f7e2cd2"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="232" width="520" height="30" uuid="631dda77-ac80-4dd3-851d-8175a8444058"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[2、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="262" width="520" height="30" uuid="bfd5f37d-d099-422d-84b8-4d6c1bb064e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[3、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="292" width="520" height="30" uuid="ea4ea3e6-3b40-43eb-adc9-33e0e22757e5"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[4、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="322" width="520" height="30" uuid="6447bb66-5aad-426f-b342-d41cd75b87af"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[5、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="352" width="520" height="30" uuid="0d8f5bf3-f491-4932-ad59-465c9fa2ed47"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[6、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="382" width="520" height="30" uuid="82eacf0b-5b6f-4b23-80b0-1422c8d42aa5"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[7、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="412" width="520" height="30" uuid="170a200d-c79b-4e92-94a1-206be81c58bc"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[8、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="442" width="520" height="30" uuid="b365370c-ea98-4b19-a552-f99ea2a21358"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[9、______________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="472" width="520" height="30" uuid="bd5e7ef2-6941-4718-af5a-18b55b86cbf3"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[10、_____________________________________________				___________________页]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="511" width="400" height="30" uuid="5f193dfe-9ea3-4009-bd24-dbda87ba79dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[总    计：粘贴材料个数：________；粘贴材料页数：________。]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="542" width="510" height="30" uuid="548c0638-47af-4c50-82de-3cfecbba10d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[证明材料存档说明]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="572" width="510" height="20" uuid="38041d2c-96a7-4919-8f14-9db36df5b1a3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[1.申请书（主要写明家庭实际情况及申请理由）；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="592" width="510" height="20" uuid="c2cc4fc0-9080-45ba-a658-512c919280e8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[2.申请家庭家庭成员户口本和身份证复印件；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="612" width="510" height="30" uuid="e86c28de-1dad-4db9-b3bb-2260a433c036"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[3.申请家庭出具的疾病诊断、医疗票据、交通事故伤害鉴定、因火灾等突发性意外事件证明、学生在校证明等证明材料的复印件；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="642" width="510" height="20" uuid="179eae6d-4a6e-443d-a2ab-cbe7aac16d52">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[4.城市低收入家庭申请应急救助时，应将区民政部门出具的《吉林市城市低收入家庭证明》复印件存档；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="662" width="510" height="30" uuid="1304a0a0-178c-4e53-8239-0d8e127b0315">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[5.申请家庭出具的诊断证明、医疗票据、交通事故伤害鉴定、因火灾等突发性意外事件证明、学生在校证明的复印件存档；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="692" width="510" height="20" uuid="2063d10a-d366-4eaf-a39c-88e506fd8a39"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[6.由乡镇出具的突发性、临时性困难的证明材料；]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="712" width="510" height="20" uuid="8fd4477c-7f66-4d1d-a184-83f9e59b2251"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[7.县人民政府规定的申请人出具的其他证明材料；]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="0" y="10" width="555" height="40" uuid="1d3c95ea-be38-4941-b03f-1d1e8be7b7c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
