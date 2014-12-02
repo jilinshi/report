@@ -5,7 +5,7 @@
 	version="2.5">
 	<description>临时救助</description>
 	<welcome-file-list>
-		<welcome-file>page/report/test.jsp</welcome-file>
+		<welcome-file>page/biz/tempquery.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>report</servlet-name>
@@ -14,5 +14,13 @@
 	<servlet-mapping>
 		<servlet-name>report</servlet-name>
 		<url-pattern>/report</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempquery</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempquery</servlet-name>
+		<url-pattern>/tempquery</url-pattern>
 	</servlet-mapping>
 </web-app>

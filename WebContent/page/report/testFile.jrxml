@@ -3,7 +3,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="66"/>
+	<property name="ireport.y" value="2656"/>
 	<parameter name="fid" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -164,7 +164,7 @@
 			<staticText>
 				<reportElement x="0" y="686" width="554" height="30" uuid="b1e0d070-d562-4b25-a69d-946429330f4f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="14"/>
+					<font fontName="宋体" size="14" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[吉 林 省 民 政 厅 监 制]]></text>
 			</staticText>
@@ -1243,7 +1243,7 @@
 			<staticText>
 				<reportElement x="30" y="501" width="500" height="40" uuid="5f5e76c0-725d-490e-9a26-99b787cc9046"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="12" pdfFontName="STSong-Light" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[3、表中“保障对象类别”应在“1城市低保对象、2城市分类施保对象、3城市低收入家庭、4农村低保对象、5农村重点保障对象、6农村低保边缘对象”中选择代码填列。]]></text>
 			</staticText>
@@ -1290,7 +1290,7 @@
 			<staticText>
 				<reportElement x="230" y="91" width="100" height="30" uuid="7cd9ad42-3981-45f5-91fc-73018defe008"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="宋体" size="16" isBold="true"/>
+					<font fontName="宋体" size="16" isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H"/>
 				</textElement>
 				<text><![CDATA[基 本 信 息]]></text>
 			</staticText>
@@ -1953,7 +1953,9 @@
 		<band height="50">
 			<textField>
 				<reportElement x="0" y="10" width="555" height="40" uuid="1d3c95ea-be38-4941-b03f-1d1e8be7b7c2"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 		</band>

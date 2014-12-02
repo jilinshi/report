@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class TempApprove
  */
-@WebServlet("/tempapprove")
+@WebServlet(name = "TempApprove", urlPatterns = { "/TempApprove" })
 public class TempApprove extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
