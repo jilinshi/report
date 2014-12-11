@@ -5,7 +5,7 @@
 	version="2.5">
 	<description>临时救助</description>
 	<welcome-file-list>
-		<welcome-file>page/biz/tempquery.jsp</welcome-file>
+		<welcome-file>page/biz/tempapprove.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>report</servlet-name>
@@ -22,5 +22,21 @@
 	<servlet-mapping>
 		<servlet-name>tempquery</servlet-name>
 		<url-pattern>/tempquery</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapprove</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApprove</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapprove</servlet-name>
+		<url-pattern>/tempapprove</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapproveinfo</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapproveinfo</servlet-name>
+		<url-pattern>/tempapproveinfo</url-pattern>
 	</servlet-mapping>
 </web-app>
