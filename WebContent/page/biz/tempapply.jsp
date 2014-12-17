@@ -1,18 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>  
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	Object msg = request.getAttribute("msg");
+	if(msg==null){
+		msg="";
+	}
+	
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html>
 <head>
 <base href="<%=basePath%>">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css"
 	href="<%=basePath%>jquery/themes/default/easyui.css">
@@ -27,7 +28,7 @@
 </head>
 <body>
 <div style="padding: 100px 20px 20px 20px;">
-	<form id="apply" method="post" action="<%=request.getContextPath()%>/tempapproveinfo">
+	<form id="apply" method="post" action="TempApplyInit" target="_self">
 	<table cellpadding="5" align="center">
 	<tr>
         <td align="CENTER" colspan="2"><font color="#0099FF" style="font-size:25px">临&nbsp;&nbsp;时&nbsp;&nbsp;救&nbsp;&nbsp;助</font></td>
@@ -46,11 +47,16 @@
         </div>
 	</td>
 	</tr>
+	<tr>
+		<td align="CENTER" colspan="2"><font color="red">
+			<%=msg%>
+		</font></td>
+	</tr>
 	</table>
 	</form>
 	<script>
         function submitForm(){
-            $('#apply').form('submit');
+            document.getElementById('apply').submit();
         }
         function clearForm(){
             $('#apply').form('clear');
