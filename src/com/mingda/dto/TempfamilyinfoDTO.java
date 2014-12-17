@@ -1,9 +1,6 @@
 package com.mingda.dto;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
-public class tempfamilyinfoDTO {
+public class TempfamilyinfoDTO {
 
 	private String familyid;
 	private String familyno;
