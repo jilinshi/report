@@ -30,13 +30,14 @@ public class TempApprove extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String paperid = request.getParameter("paperid");
-		
-		
+	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("1111");
+		String familyid = request.getParameter("familyid");
+		
+		System.out.println(familyid);
+		
 	}
 
 }
