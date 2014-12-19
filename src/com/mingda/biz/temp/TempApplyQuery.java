@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,33 +20,26 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
-import com.mingda.dto.TempJzDTO;
 import com.mingda.dto.TempfamilyinfoDTO;
 
-@WebServlet(name = "TempQuery", urlPatterns = { "/TempQuery" })
-public class TempQuery extends HttpServlet {
+
+@WebServlet(name = "TempApplyQuery", urlPatterns = { "/TempApplyQuery" })
+public class TempApplyQuery extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public TempQuery() {
+    public TempApplyQuery() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 
-	@SuppressWarnings({ "static-access", "unused" })
+	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String ds = request.getParameter("ds");
-		String mastername = request.getParameter("mastername");
-		String paperid = request.getParameter("paperid");
-		String familyno = request.getParameter("familyno");
-		String onno = request.getParameter("onno");
-		String page = request.getParameter("page");
-		String rows = request.getParameter("rows");
-		Integer p = new Integer(page);
-		Integer r = new Integer(rows);
-		List<TempJzDTO> ms = new ArrayList<TempJzDTO>();
-		List<TempJzDTO> mspage = new ArrayList<TempJzDTO>();
+		String paperid = request.getParameter("p");
+		String ds = "cs";
+		List<TempfamilyinfoDTO> ms = new ArrayList<TempfamilyinfoDTO>();
 		if(ds==null||"".equals(ds)){
 		}else{
 			JdbcConnection db = new JdbcConnection(ds);
@@ -53,25 +47,12 @@ public class TempQuery extends HttpServlet {
 			try {
 				response.setContentType("text/html;charset=UTF-8");
 				conn = db.getConnection();
-				String jwhere = "";
-				if(mastername==null||"".equals(mastername)){
-				}else{
-					jwhere = jwhere + " and o.mastername='"+mastername+"' ";
-				}
-				if(paperid==null||"".equals(paperid)){
-				}else{
-					jwhere = jwhere + " and o.paperid='"+paperid+"' ";
-				}
-				if(familyno==null||"".equals(familyno)){
-				}else{
-					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
-				}
-				String sql ="select * from temp_jz o where 1=1" + jwhere;
+				String sql ="select * from tempfamiyinfo o where o.paperid='"+paperid+"' ";
 				Statement ps=conn.createStatement();
 			    ResultSet rs=ps.executeQuery(sql);
 			    while(rs.next())
 		        {
-			    	TempJzDTO m = new TempJzDTO();
+			    	TempfamilyinfoDTO m = new TempfamilyinfoDTO();
 			    	m.setFamilyid(rs.getString("familyid"));
 			    	m.setFamilyno(rs.getString("familyno"));
 			    	m.setMasterid(rs.getString("masterid"));
@@ -84,22 +65,8 @@ public class TempQuery extends HttpServlet {
 			    	ms.add(m);
 		        }
 			    JSONObject json = new JSONObject();
-				if (null != ms) {
-	
-					for (int i = (p - 1) * r; i < p * r; i++) {
-						if (i == ms.size()) {
-							break;
-						}
-						mspage.add(ms.get(i));
-					}
-	
-					JSONArray jsArr = JSONArray.fromObject(mspage);
-					json.put("total", ms.size());
-					json.put("rows", jsArr.toString());
-				} else {
-					json.put("total", 0);
-					json.put("rows", "");
-				}
+			    JSONArray jsArr = JSONArray.fromObject(ms);
+			    json.put("rows", jsArr.toString());
 			    response.setContentType("application/x-json");//需要设置ContentType 为"application/x-json"
 			    PrintWriter pw = response.getWriter();
 			    pw.write(json.toString());

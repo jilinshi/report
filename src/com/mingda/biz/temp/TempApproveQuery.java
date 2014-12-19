@@ -22,24 +22,38 @@ import com.mingda.database.JdbcConnection;
 import com.mingda.dto.TempJzDTO;
 import com.mingda.dto.TempfamilyinfoDTO;
 
-@WebServlet(name = "TempQuery", urlPatterns = { "/TempQuery" })
-public class TempQuery extends HttpServlet {
+@WebServlet(name = "TempApproveQuery", urlPatterns = { "/TempApproveQuery" })
+public class TempApproveQuery extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public TempQuery() {
+    public TempApproveQuery() {
         super();
     }
 
+	@SuppressWarnings("static-access")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 
-	@SuppressWarnings({ "static-access", "unused" })
+	@SuppressWarnings({ "unused", "static-access" })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String onno = request.getParameter("onno");
+		String agoto = "='' ";
+		if("".equals(onno)||null==onno){
+			
+		}else{
+			if(onno.length()==8){
+				agoto = "='1' ";
+			}else if(onno.length()==6){
+				agoto = "='2' ";
+			}else if(onno.length()==4){
+				agoto = "in ('1','2') ";
+			}
+		}
 		String ds = request.getParameter("ds");
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");
-		String onno = request.getParameter("onno");
 		String page = request.getParameter("page");
 		String rows = request.getParameter("rows");
 		Integer p = new Integer(page);
@@ -66,21 +80,60 @@ public class TempQuery extends HttpServlet {
 				}else{
 					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
 				}
-				String sql ="select * from temp_jz o where 1=1" + jwhere;
+				String sql ="select * from temp_jz o where 1=1 and o.approvegoto "+ agoto + jwhere;
 				Statement ps=conn.createStatement();
 			    ResultSet rs=ps.executeQuery(sql);
 			    while(rs.next())
 		        {
 			    	TempJzDTO m = new TempJzDTO();
+			    	m.setTjzId(rs.getString("tjz_id"));
 			    	m.setFamilyid(rs.getString("familyid"));
 			    	m.setFamilyno(rs.getString("familyno"));
 			    	m.setMasterid(rs.getString("masterid"));
 			    	m.setMastername(rs.getString("mastername"));
 			    	m.setPaperid(rs.getString("paperid"));
-			    	m.setOperstate(rs.getString("operstate"));
-			    	m.setOnallname(rs.getString("onallname"));
 			    	m.setPercount(rs.getString("percount"));
 			    	m.setSalcount(rs.getString("salcount"));
+			    	m.setOperstate(rs.getString("operstate"));
+			    	m.setOn_no(rs.getString("on_no"));
+			    	m.setFamsort(rs.getString("famsort"));
+			    	m.setAccounts(rs.getString("accounts"));
+			    	m.setOnallname(rs.getString("onallname"));
+			    	m.setFde(rs.getString("fde"));
+			    	m.setFdefamilyno(rs.getString("fdefamilyno"));
+			    	m.setFdename(rs.getString("fdename"));
+			    	m.setF_income(rs.getString("f_income"));
+			    	m.setFm_sex(rs.getString("fm_sex"));
+			    	m.setFmage(rs.getString("fmage"));
+			    	m.setF_familyid(rs.getString("f_familyid"));
+			    	m.setXm_jtcy0(rs.getString("xm_jtcy0"));
+			    	m.setSfzh_jtcy0(rs.getString("sfzh_jtcy0"));
+			    	m.setRel0(rs.getString("rel0"));
+			    	m.setRes0(rs.getString("res0"));
+			    	m.setBody0(rs.getString("body0"));
+			    	m.setXm_jtcy1(rs.getString("xm_jtcy1"));
+			    	m.setSfzh_jtcy1(rs.getString("sfzh_jtcy1"));
+			    	m.setRel1(rs.getString("rel1"));
+			    	m.setRes1(rs.getString("res1"));
+			    	m.setBody1(rs.getString("body1"));
+			    	m.setXm_jtcy2(rs.getString("xm_jtcy2"));
+			    	m.setSfzh_jtcy2(rs.getString("sfzh_jtcy2"));
+			    	m.setRel2(rs.getString("rel2"));
+			    	m.setRes2(rs.getString("res2"));
+			    	m.setBody2(rs.getString("body2"));
+			    	m.setXm_jtcy3(rs.getString("xm_jtcy3"));
+			    	m.setSfzh_jtcy3(rs.getString("sfzh_jtcy3"));
+			    	m.setRel3(rs.getString("rel3"));
+			    	m.setRes3(rs.getString("res3"));
+			    	m.setBody3(rs.getString("body3"));
+			    	m.setXm_jtcy4(rs.getString("xm_jtcy4"));
+			    	m.setSfzh_jtcy4(rs.getString("sfzh_jtcy4"));
+			    	m.setRel4(rs.getString("rel4"));
+			    	m.setRes4(rs.getString("res4"));
+			    	m.setBody4(rs.getString("body4"));
+			    	m.setQx(rs.getString("qx"));
+			    	m.setJd(rs.getString("jd"));
+			    	m.setSq(rs.getString("sq"));
 			    	ms.add(m);
 		        }
 			    JSONObject json = new JSONObject();
@@ -118,4 +171,5 @@ public class TempQuery extends HttpServlet {
 			}
 		}
 	}
+
 }

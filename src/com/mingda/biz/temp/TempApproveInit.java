@@ -7,45 +7,45 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
-import com.mingda.dto.TempfamilyinfoDTO;
+import com.mingda.dto.TempJzDTO;
 
-@WebServlet(name = "TempApproveInfo", urlPatterns = { "/TempApproveInfo" })
-public class TempApproveInfo extends HttpServlet {
+@WebServlet(name = "TempApproveInit", urlPatterns = { "/TempApproveInit" })
+public class TempApproveInit extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public TempApproveInfo() {
+    public TempApproveInit() {
         super();
     }
 
 	@SuppressWarnings("static-access")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String familyid = request.getParameter("familyid");
+		String tjzid = request.getParameter("tjzid");
 		String ds = "cs";
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
 		try {
 			response.setContentType("text/html;charset=UTF-8");
 			conn = db.getConnection();
-			String sql ="select * from tempfamiyinfo o where o.familyid='"+familyid+"' ";
+			String sql ="select * from temp_jz o where o.tjz_id='"+tjzid+"' ";
 			Statement ps=conn.createStatement();
 		    ResultSet rs=ps.executeQuery(sql);
-		    List<TempfamilyinfoDTO> ms = new ArrayList<TempfamilyinfoDTO>();
+		    List<TempJzDTO> ms = new ArrayList<TempJzDTO>();
 		    while(rs.next())
 	        {
-		    	TempfamilyinfoDTO m = new TempfamilyinfoDTO();
+		    	TempJzDTO m = new TempJzDTO();
+		    	m.setTjzId(rs.getString("tjz_id"));
 		    	m.setFamilyid(rs.getString("familyid"));
 		    	m.setFamilyno(rs.getString("familyno"));
 		    	m.setMasterid(rs.getString("masterid"));
@@ -61,11 +61,6 @@ public class TempApproveInfo extends HttpServlet {
 		    	m.setFde(rs.getString("fde"));
 		    	m.setFdefamilyno(rs.getString("fdefamilyno"));
 		    	m.setFdename(rs.getString("fdename"));
-		    	m.setIsybsqdb(rs.getString("isybsqdb"));
-		    	m.setBankname(rs.getString("bankname"));
-		    	m.setBanktime(rs.getString("banktime"));
-		    	m.setBankdate(rs.getString("bankdate"));
-		    	m.setBanktype(rs.getString("banktype"));
 		    	m.setF_income(rs.getString("f_income"));
 		    	m.setFm_sex(rs.getString("fm_sex"));
 		    	m.setFmage(rs.getString("fmage"));
@@ -98,6 +93,24 @@ public class TempApproveInfo extends HttpServlet {
 		    	m.setQx(rs.getString("qx"));
 		    	m.setJd(rs.getString("jd"));
 		    	m.setSq(rs.getString("sq"));
+		    	m.setApproveresult1(rs.getString("approveresult1"));
+		    	m.setApproveperson1(rs.getString("approveperson1"));
+		    	m.setApproveidea1(rs.getString("approveidea1"));
+		    	m.setAprrovedate1(rs.getString("aprrovedate1"));
+		    	m.setApproveresult2(rs.getString("approveresult2"));
+		    	m.setApproveperson2(rs.getString("approveperson2"));
+		    	m.setApproveidea2(rs.getString("approveidea2"));
+		    	m.setAprrovedate2(rs.getString("aprrovedate2"));
+		    	m.setApproveresult3(rs.getString("approveresult3"));
+		    	m.setApproveperson3(rs.getString("approveperson3"));
+		    	m.setApproveidea3(rs.getString("approveidea3"));
+		    	m.setAprrovedate3(rs.getString("aprrovedate3"));
+		    	m.setApprovegoto(rs.getString("approvegoto"));
+		    	m.setSerialno(rs.getString("serialno"));
+		    	m.setCreatetime(rs.getString("createtime"));
+		    	m.setApproveend(rs.getString("approveend"));
+		    	m.setUpdatetime(rs.getString("updatetime"));
+		    	m.setApprovemoney(rs.getString("approvemoney"));
 		    	ms.add(m);
 	        }
 		    JSONObject json = new JSONObject();
