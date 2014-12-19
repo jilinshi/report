@@ -35,7 +35,7 @@
 				<td>身份证号：<input id="paperid" size="25"
 					class="easyui-textbox" type="text" name="paperid"
 					data-options=""></input></td>
-				<td>来源:<input id="ds" size="20" class="easyui-textbox" name="ds" type="text" ></input></td>
+				<td>来源:<input id="ds" size="20" class="easyui-textbox" name="ds" type="text" value="cs"></input></td>
 				<td><a href="javascript:void(0)" class="easyui-linkbutton"
 					onclick="submitForm()" icon="icon-search">查询</a> <a href="javascript:void(0)"
 					class="easyui-linkbutton" onclick="clearForm()" icon="icon-redo">导出</a></td>

@@ -5,7 +5,7 @@
 	version="2.5">
 	<description>临时救助</description>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>report</servlet-name>
@@ -32,12 +32,28 @@
 		<url-pattern>/tempapprove</url-pattern>
 	</servlet-mapping>
 	<servlet>
-		<servlet-name>tempapproveinfo</servlet-name>
-		<servlet-class>com.mingda.biz.temp.TempApproveInfo</servlet-class>
+		<servlet-name>tempapproveinit</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveInit</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>tempapproveinfo</servlet-name>
-		<url-pattern>/tempapproveinfo</url-pattern>
+		<servlet-name>tempapproveinit</servlet-name>
+		<url-pattern>/tempapproveinit</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapplyquery</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApplyQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapplyquery</servlet-name>
+		<url-pattern>/tempapplyquery</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapplyinfo</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApplyInfo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapplyinfo</servlet-name>
+		<url-pattern>/tempapplyinfo</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>tempapply</servlet-name>
@@ -46,5 +62,13 @@
 	<servlet-mapping>
 		<servlet-name>tempapply</servlet-name>
 		<url-pattern>/tempapply</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapprovequery</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapprovequery</servlet-name>
+		<url-pattern>/tempapprovequery</url-pattern>
 	</servlet-mapping>
 </web-app>
