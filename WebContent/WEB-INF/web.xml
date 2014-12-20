@@ -71,4 +71,20 @@
 		<servlet-name>tempapprovequery</servlet-name>
 		<url-pattern>/tempapprovequery</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapproveendquery</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveEndQuery</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapproveendquery</servlet-name>
+		<url-pattern>/tempapproveendquery</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapproveend</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveEnd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapproveend</servlet-name>
+		<url-pattern>/tempapproveend</url-pattern>
+	</servlet-mapping>
 </web-app>

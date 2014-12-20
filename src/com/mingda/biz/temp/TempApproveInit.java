@@ -94,14 +94,29 @@ public class TempApproveInit extends HttpServlet {
 		    	m.setJd(rs.getString("jd"));
 		    	m.setSq(rs.getString("sq"));
 		    	m.setApproveresult1(rs.getString("approveresult1"));
+		    	if("1".equals(rs.getString("approveresult1"))){
+		    		m.setApproveresult1txt("同意");
+		    	}else if("0".equals(rs.getString("approveresult1"))){
+		    		m.setApproveresult1txt("不同意");
+		    	}
 		    	m.setApproveperson1(rs.getString("approveperson1"));
 		    	m.setApproveidea1(rs.getString("approveidea1"));
 		    	m.setAprrovedate1(rs.getString("aprrovedate1"));
 		    	m.setApproveresult2(rs.getString("approveresult2"));
+		    	if("1".equals(rs.getString("approveresult2"))){
+		    		m.setApproveresult2txt("同意");
+		    	}else if("0".equals(rs.getString("approveresult2"))){
+		    		m.setApproveresult2txt("不同意");
+		    	}
 		    	m.setApproveperson2(rs.getString("approveperson2"));
 		    	m.setApproveidea2(rs.getString("approveidea2"));
 		    	m.setAprrovedate2(rs.getString("aprrovedate2"));
 		    	m.setApproveresult3(rs.getString("approveresult3"));
+		    	if("1".equals(rs.getString("approveresult3"))){
+		    		m.setApproveresult3txt("同意");
+		    	}else if("0".equals(rs.getString("approveresult3"))){
+		    		m.setApproveresult3txt("不同意");
+		    	}
 		    	m.setApproveperson3(rs.getString("approveperson3"));
 		    	m.setApproveidea3(rs.getString("approveidea3"));
 		    	m.setAprrovedate3(rs.getString("aprrovedate3"));

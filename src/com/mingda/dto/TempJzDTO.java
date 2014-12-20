@@ -52,14 +52,17 @@ public class TempJzDTO {
 	private String jd;
 	private String sq;
 	private String approveresult1;
+	private String approveresult1txt;
 	private String approveperson1;
 	private String approveidea1;
 	private String aprrovedate1;
 	private String approveresult2;
+	private String approveresult2txt;
 	private String approveperson2;
 	private String approveidea2;
 	private String aprrovedate2;
 	private String approveresult3;
+	private String approveresult3txt;
 	private String approveperson3;
 	private String approveidea3;
 	private String aprrovedate3;
@@ -67,6 +70,7 @@ public class TempJzDTO {
 	private String serialno;
 	private String createtime;
 	private String approveend;
+	private String approveendtxt;
 	private String updatetime;
 	private String approvemoney;
 	public String getFamilyid() {
@@ -466,6 +470,30 @@ public class TempJzDTO {
 	}
 	public void setTjzId(String tjzId) {
 		this.tjzId = tjzId;
+	}
+	public String getApproveresult1txt() {
+		return approveresult1txt;
+	}
+	public void setApproveresult1txt(String approveresult1txt) {
+		this.approveresult1txt = approveresult1txt;
+	}
+	public String getApproveresult2txt() {
+		return approveresult2txt;
+	}
+	public void setApproveresult2txt(String approveresult2txt) {
+		this.approveresult2txt = approveresult2txt;
+	}
+	public String getApproveresult3txt() {
+		return approveresult3txt;
+	}
+	public void setApproveresult3txt(String approveresult3txt) {
+		this.approveresult3txt = approveresult3txt;
+	}
+	public String getApproveendtxt() {
+		return approveendtxt;
+	}
+	public void setApproveendtxt(String approveendtxt) {
+		this.approveendtxt = approveendtxt;
 	}
 	
 	

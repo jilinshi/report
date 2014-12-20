@@ -20,7 +20,6 @@ import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
 import com.mingda.dto.TempJzDTO;
-import com.mingda.dto.TempfamilyinfoDTO;
 
 @WebServlet(name = "TempApproveQuery", urlPatterns = { "/TempApproveQuery" })
 public class TempApproveQuery extends HttpServlet {
@@ -30,26 +29,12 @@ public class TempApproveQuery extends HttpServlet {
         super();
     }
 
-	@SuppressWarnings("static-access")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 	}
 
 	@SuppressWarnings({ "unused", "static-access" })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String onno = request.getParameter("onno");
-		String agoto = "='' ";
-		if("".equals(onno)||null==onno){
-			
-		}else{
-			if(onno.length()==8){
-				agoto = "='1' ";
-			}else if(onno.length()==6){
-				agoto = "='2' ";
-			}else if(onno.length()==4){
-				agoto = "in ('1','2') ";
-			}
-		}
 		String ds = request.getParameter("ds");
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
@@ -80,7 +65,7 @@ public class TempApproveQuery extends HttpServlet {
 				}else{
 					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
 				}
-				String sql ="select * from temp_jz o where 1=1 and o.approvegoto "+ agoto + jwhere;
+				String sql ="select * from temp_jz o where 1=1 and o.approvegoto ='1' " + jwhere;
 				Statement ps=conn.createStatement();
 			    ResultSet rs=ps.executeQuery(sql);
 			    while(rs.next())
@@ -137,7 +122,7 @@ public class TempApproveQuery extends HttpServlet {
 			    	ms.add(m);
 		        }
 			    JSONObject json = new JSONObject();
-				if (null != ms) {
+				if (ms.size()>0) {
 	
 					for (int i = (p - 1) * r; i < p * r; i++) {
 						if (i == ms.size()) {

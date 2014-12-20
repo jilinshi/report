@@ -20,26 +20,25 @@ import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
 import com.mingda.dto.TempJzDTO;
-import com.mingda.dto.TempfamilyinfoDTO;
 
-@WebServlet(name = "TempQuery", urlPatterns = { "/TempQuery" })
-public class TempQuery extends HttpServlet {
+@WebServlet(name = "TempApproveEndQuery", urlPatterns = { "/TempApproveEndQuery" })
+public class TempApproveEndQuery extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public TempQuery() {
+    public TempApproveEndQuery() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 	}
 
-	@SuppressWarnings({ "static-access", "unused" })
+	@SuppressWarnings({ "unused", "static-access" })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ds = request.getParameter("ds");
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");
-		String onno = request.getParameter("onno");
 		String page = request.getParameter("page");
 		String rows = request.getParameter("rows");
 		Integer p = new Integer(page);
@@ -66,7 +65,7 @@ public class TempQuery extends HttpServlet {
 				}else{
 					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
 				}
-				String sql ="select * from temp_jz o where 1=1" + jwhere;
+				String sql ="select * from temp_jz o where 1=1 and o.approvegoto ='2' " + jwhere;
 				Statement ps=conn.createStatement();
 			    ResultSet rs=ps.executeQuery(sql);
 			    while(rs.next())
@@ -120,61 +119,6 @@ public class TempQuery extends HttpServlet {
 			    	m.setQx(rs.getString("qx"));
 			    	m.setJd(rs.getString("jd"));
 			    	m.setSq(rs.getString("sq"));
-			    	m.setApproveresult1(rs.getString("approveresult1"));
-			    	if("1".equals(rs.getString("approveresult1"))){
-			    		m.setApproveresult1txt("同意");
-			    	}else if("0".equals(rs.getString("approveresult1"))){
-			    		m.setApproveresult1txt("不同意");
-			    	}
-			    	m.setApproveperson1(rs.getString("approveperson1"));
-			    	m.setApproveidea1(rs.getString("approveidea1"));
-			    	String appdate1 = "";
-			    	if("".equals(rs.getString("aprrovedate1"))||rs.getString("aprrovedate1")==null){
-			    	}else{
-			    		appdate1 = rs.getString("aprrovedate1").split(" ")[0];
-			    	}
-			    	m.setAprrovedate1(appdate1);
-			    	m.setApproveresult2(rs.getString("approveresult2"));
-			    	if("1".equals(rs.getString("approveresult2"))){
-			    		m.setApproveresult2txt("同意");
-			    	}else if("0".equals(rs.getString("approveresult2"))){
-			    		m.setApproveresult2txt("不同意");
-			    	}
-			    	m.setApproveperson2(rs.getString("approveperson2"));
-			    	m.setApproveidea2(rs.getString("approveidea2"));
-			    	String appdate2 = "";
-			    	if("".equals(rs.getString("aprrovedate2"))||rs.getString("aprrovedate2")==null){
-			    	}else{
-			    		appdate2 = rs.getString("aprrovedate2").split(" ")[0];
-			    	}
-			    	m.setAprrovedate2(appdate2);
-			    	m.setApproveresult3(rs.getString("approveresult3"));
-			    	if("1".equals(rs.getString("approveresult3"))){
-			    		m.setApproveresult3txt("同意");
-			    	}else if("0".equals(rs.getString("approveresult3"))){
-			    		m.setApproveresult3txt("不同意");
-			    	}
-			    	m.setApproveperson3(rs.getString("approveperson3"));
-			    	m.setApproveidea3(rs.getString("approveidea3"));
-			    	String appdate3 = "";
-			    	if("".equals(rs.getString("aprrovedate3"))||rs.getString("aprrovedate3")==null){
-			    	}else{
-			    		appdate3 = rs.getString("aprrovedate3").split(" ")[0];
-			    	}
-			    	m.setAprrovedate3(appdate3);
-			    	m.setApprovegoto(rs.getString("approvegoto"));
-			    	m.setSerialno(rs.getString("serialno"));
-			    	m.setCreatetime(rs.getString("createtime"));
-			    	m.setApproveend(rs.getString("approveend"));
-			    	if("1".equals(rs.getString("approveend"))){
-			    		m.setApproveendtxt("同意救助");
-			    	}else if("0".equals(rs.getString("approveend"))){
-			    		m.setApproveendtxt("不同意救助");
-			    	}else if("-1".equals(rs.getString("approveend"))){
-			    		m.setApproveendtxt("作废");
-			    	}
-			    	m.setUpdatetime(rs.getString("updatetime"));
-			    	m.setApprovemoney(rs.getString("approvemoney"));
 			    	ms.add(m);
 		        }
 			    JSONObject json = new JSONObject();
@@ -212,4 +156,5 @@ public class TempQuery extends HttpServlet {
 			}
 		}
 	}
+
 }

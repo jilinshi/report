@@ -36,6 +36,7 @@
 					class="easyui-textbox" type="text" name="paperid"
 					data-options=""></input></td>
 				<td>来源:<input id="ds" size="20" class="easyui-textbox" name="ds" type="text" value="cs"></input></td>
+				<td>审批结果:<input id="approveend" size="20" class="easyui-textbox" name="ds" type="text" value="cs"></input></td>
 				<td><a href="javascript:void(0)" class="easyui-linkbutton"
 					onclick="submitForm()" icon="icon-search">查询</a> <a href="javascript:void(0)"
 					class="easyui-linkbutton" onclick="clearForm()" icon="icon-redo">导出</a></td>
@@ -62,9 +63,22 @@
 				 {field:'paperid',title:'身份证号码',width:'12%'},
 				 {field:'familyno',title:'家庭编号',width:'10%'},
 				 {field:'operstate',title:'救助状态',width:'5%'},
-				 {field:'percount',title:'家庭人口数',width:'5%'},
-				 {field:'salcount',title:'受助人口数',width:'5%'},
-				 {field:'onallname',title:'地址'},
+				 {field:'approvemoney',title:'救助金额',
+					 formatter:function(value,rec,index){
+						 return '<span style="color:red;">'+value+'</span>';
+					 }
+				 },
+				 {field:'approveresult1txt',title:'社区审批意见'},
+				 {field:'aprrovedate1',title:'社区审批时间'},
+				 {field:'approveresult2txt',title:'街道审批意见'},
+				 {field:'aprrovedate2',title:'街道审批时间'},
+				 {field:'approveresult3txt',title:'区县审批意见'},
+				 {field:'aprrovedate3',title:'区县审批时间'},
+				 {field:'approveendtxt',title:'审批结果',
+					 formatter:function(value,rec,index){
+						 return '<span style="color:red;">'+value+'</span>';
+					 }
+				 },
 				 {field:'opt',title:'操作',align:'center', width:'5%',
 	                   formatter:function(value,rec,index){
 	                       var d = '<a href="javascript:void(0)" onclick="view(\''+ rec.paperid +'\')">查看</a> ';

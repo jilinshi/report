@@ -47,7 +47,7 @@
 		<table id="list_data" style="width: 100%; padding: 20px 20px 20px 20px;">
 		</table>
 	</div>
-	<div id="win_app" class="easyui-window" closed="true"  style="width:910px;height:470px;padding:5px;">
+	<div id="win_app" class="easyui-window" closed="true"  style="width:910px;height:500px;padding:5px;">
 	<div class="easyui-layout" data-options="fit:true">
 		<form id="app" name="app" method="post" action="<%=request.getContextPath()%>/tempapprove">
            <div data-options="region:'north',split:true" style="width:910px ;height:270px;padding:5px;">
@@ -185,13 +185,23 @@
 		                <td><input name="aprrovedate1" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
 	                </tr>
 	                <tr>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
+		                <td><input name="approveperson2" class="easyui-textbox" type="text" disabled="disabled"></input></td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
+		                <td>
+		                <input name="approveresult2txt" class="easyui-textbox" type="text" disabled="disabled"></input>
+		                </td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批时间：</td>
+		                <td><input name="aprrovedate2" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
+	                </tr>
+	                <tr>
 	            		<td style="font-size:5;font-weight:bold;color:#006699">救助金额：</td>
 	            		<td colspan="5"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" ></input></td>
 	            	</tr>
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批人：</td>
 		                <td><input id="approveperson" name="approveperson" class="easyui-textbox" type="text"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批结果：</td>
 		                <td>
 		                <input type="radio" name="approveresult" value="1" checked="checked"/>同意
 		                	<input type="radio" name="approveresult" value="0"/>不同意
@@ -212,7 +222,7 @@
 	$('#list_data').datagrid({
 	    title:'查询结果',
 	    iconCls:'icon-search',//图标  
-	    url:'<%=request.getContextPath()%>/tempapprovequery',
+	    url:'<%=request.getContextPath()%>/tempapproveendquery',
 		remoteSort : false,
 		singleSelect : true,//是否单选  
 		pagination : true,//分页控件  
@@ -291,7 +301,7 @@
      	var approvemoney = document.getElementById("approvemoney").value;
      	$.ajax({
             type: "POST",
-            url: '<%=request.getContextPath()%>/tempapprove',
+            url: '<%=request.getContextPath()%>/tempapproveend',
             dataType: "json",
             async: false,
             data: {
