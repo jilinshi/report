@@ -70,6 +70,9 @@
             }
     	});
     	
+    };
+    function printapp(ds,fid,mid){
+    	window.open("<%=request.getContextPath()%>/report?ds="+ds+"&fid="+fid+"&mid="+mid+"&jpt=pdf");
     }
 	</script>
 <body>
@@ -246,9 +249,11 @@ $('#list_querydata').datagrid({
 				 {field:'percount',title:'家庭人口数',width:'5%'},
 				 {field:'salcount',title:'受助人口数',width:'5%'},
 				 {field:'onallname',title:'地址'},
-				 {field:'opt',title:'操作',align:'center', width:'5%',
+				 {field:'opt',title:'操作',align:'center',width:'15%',
 	                   formatter:function(value,rec,index){
 	                       var d = '<a href="javascript:void(0)" onclick="apply(\''+ rec.familyid +'\')">申请</a> ';
+	                       d = d+ '&nbsp;&nbsp;&nbsp;&nbsp'
+	                       + '<a href="javascript:void(0)" onclick="printapp(\''+ rec.ds +'\',\''+ rec.familyid +'\',\''+ rec.masterid +'\')">打印申请审批表</a> ';
 	                       return d;
 	                   }
 	                 }

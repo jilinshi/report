@@ -62,6 +62,7 @@ public class TempApplyQuery extends HttpServlet {
 			    	m.setOnallname(rs.getString("onallname"));
 			    	m.setPercount(rs.getString("percount"));
 			    	m.setSalcount(rs.getString("salcount"));
+			    	m.setDs(ds);
 			    	ms.add(m);
 		        }
 			    JSONObject json = new JSONObject();

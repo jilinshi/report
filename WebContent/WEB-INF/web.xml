@@ -87,4 +87,12 @@
 		<servlet-name>tempapproveend</servlet-name>
 		<url-pattern>/tempapproveend</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>temporg</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempOrg</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>temporg</servlet-name>
+		<url-pattern>/temporg</url-pattern>
+	</servlet-mapping>
 </web-app>

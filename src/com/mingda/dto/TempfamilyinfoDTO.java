@@ -54,6 +54,7 @@ public class TempfamilyinfoDTO {
 	private String qx;
 	private String jd;
 	private String sq;
+	private String ds;
 	public String getFamilyid() {
 		return familyid;
 	}
@@ -365,6 +366,12 @@ public class TempfamilyinfoDTO {
 	}
 	public void setSq(String sq) {
 		this.sq = sq;
+	}
+	public String getDs() {
+		return ds;
+	}
+	public void setDs(String ds) {
+		this.ds = ds;
 	}
 	
 	

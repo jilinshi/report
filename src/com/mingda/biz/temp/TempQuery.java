@@ -39,7 +39,8 @@ public class TempQuery extends HttpServlet {
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");
-		String onno = request.getParameter("onno");
+		String approveend = request.getParameter("approveend");
+		String orgno = request.getParameter("orgno");
 		String page = request.getParameter("page");
 		String rows = request.getParameter("rows");
 		Integer p = new Integer(page);
@@ -65,6 +66,16 @@ public class TempQuery extends HttpServlet {
 				if(familyno==null||"".equals(familyno)){
 				}else{
 					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
+				}
+				if(approveend==null||"".equals(approveend)){
+					
+				}else{
+					jwhere = jwhere + " and o.approveend='"+approveend+"' ";
+				}
+				if(orgno==null||"".equals(orgno)){
+					
+				}else{
+					jwhere = jwhere + " and o.familyno like '"+orgno+"%' ";
 				}
 				String sql ="select * from temp_jz o where 1=1" + jwhere;
 				Statement ps=conn.createStatement();
