@@ -1,0 +1,14 @@
+[{
+	"value":"",
+	"text":"全部",
+	"selected":true
+},{
+	"value":"1",
+	"text":"同意"
+},{
+	"value":"0",
+	"text":"不同意"
+},{
+	"value":"-1",
+	"text":"作废"
+}]

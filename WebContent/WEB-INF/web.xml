@@ -95,4 +95,12 @@
 		<servlet-name>temporg</servlet-name>
 		<url-pattern>/temporg</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>downloadexcel</servlet-name>
+		<servlet-class>com.mingda.util.DownloadExcel</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>downloadexcel</servlet-name>
+		<url-pattern>/downloadexcel</url-pattern>
+	</servlet-mapping>
 </web-app>

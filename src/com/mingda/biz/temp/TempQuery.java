@@ -14,13 +14,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
 import com.mingda.dto.TempJzDTO;
-import com.mingda.dto.TempfamilyinfoDTO;
 
 @WebServlet(name = "TempQuery", urlPatterns = { "/TempQuery" })
 public class TempQuery extends HttpServlet {
@@ -188,6 +188,7 @@ public class TempQuery extends HttpServlet {
 			    	m.setApprovemoney(rs.getString("approvemoney"));
 			    	ms.add(m);
 		        }
+			    HttpSession session=request.getSession();
 			    JSONObject json = new JSONObject();
 				if (ms.size()>0) {
 	
@@ -201,6 +202,7 @@ public class TempQuery extends HttpServlet {
 					JSONArray jsArr = JSONArray.fromObject(mspage);
 					json.put("total", ms.size());
 					json.put("rows", jsArr.toString());
+				    session.setAttribute("ms", ms);
 				} else {
 					json.put("total", 0);
 					json.put("rows", "");

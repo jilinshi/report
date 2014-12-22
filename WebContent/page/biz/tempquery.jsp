@@ -82,8 +82,8 @@ function cancel(id){
 			            "/>
 				</td>
 				<td><a href="javascript:void(0)" class="easyui-linkbutton"
-					onclick="submitForm()" icon="icon-search">查询</a> <a href="javascript:void(0)"
-					class="easyui-linkbutton" onclick="clearForm()" icon="icon-redo">导出</a></td>
+					onclick="submitForm()" icon="icon-search">查询</a> <a href="<%=request.getContextPath()%>/downloadexcel"
+					class="easyui-linkbutton" icon="icon-redo">导出</a></td>
 			</tr>
 		</table>
 		<table id="list_data" style="width: 100%; padding: 20px 20px 20px 20px;">
