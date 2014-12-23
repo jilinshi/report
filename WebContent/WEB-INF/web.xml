@@ -97,7 +97,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>downloadexcel</servlet-name>
-		<servlet-class>com.mingda.util.DownloadExcel</servlet-class>
+		<servlet-class>com.mingda.biz.temp.DownloadExcel</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>downloadexcel</servlet-name>

@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -33,7 +35,7 @@ public class TempQuery extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	}
 
-	@SuppressWarnings({ "static-access", "unused" })
+	@SuppressWarnings({ "static-access", "rawtypes", "unchecked" })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ds = request.getParameter("ds");
 		String mastername = request.getParameter("mastername");
@@ -47,6 +49,7 @@ public class TempQuery extends HttpServlet {
 		Integer r = new Integer(rows);
 		List<TempJzDTO> ms = new ArrayList<TempJzDTO>();
 		List<TempJzDTO> mspage = new ArrayList<TempJzDTO>();
+		List<HashMap> hm = new ArrayList<HashMap>();
 		if(ds==null||"".equals(ds)){
 		}else{
 			JdbcConnection db = new JdbcConnection(ds);
@@ -187,22 +190,39 @@ public class TempQuery extends HttpServlet {
 			    	m.setUpdatetime(rs.getString("updatetime"));
 			    	m.setApprovemoney(rs.getString("approvemoney"));
 			    	ms.add(m);
+			    	//打印
+			    	HashMap map = new HashMap();
+			    	map.put("familyno", rs.getString("familyno"));
+			    	map.put("mastername", rs.getString("mastername"));
+			    	map.put("paperid", rs.getString("paperid"));
+			    	map.put("operstate", rs.getString("operstate"));
+			    	map.put("qx", rs.getString("qx"));
+			    	map.put("jd", rs.getString("jd"));
+			    	map.put("sq", rs.getString("sq"));
+			    	hm.add(map);
 		        }
 			    HttpSession session=request.getSession();
+			    session.setAttribute("hm", hm);
+			    LinkedHashMap title = new LinkedHashMap();
+				title.put("familyno", "家庭编号");
+				title.put("mastername", "户主姓名");
+				title.put("paperid", "身份证号码");
+				title.put("operstate", "救助状态");
+				title.put("qx", "区县");
+				title.put("jd", "街道");
+				title.put("sq", "社区");
+				session.setAttribute("title", title);
 			    JSONObject json = new JSONObject();
 				if (ms.size()>0) {
-	
 					for (int i = (p - 1) * r; i < p * r; i++) {
 						if (i == ms.size()) {
 							break;
 						}
 						mspage.add(ms.get(i));
 					}
-	
 					JSONArray jsArr = JSONArray.fromObject(mspage);
 					json.put("total", ms.size());
 					json.put("rows", jsArr.toString());
-				    session.setAttribute("ms", ms);
 				} else {
 					json.put("total", 0);
 					json.put("rows", "");

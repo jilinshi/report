@@ -50,7 +50,8 @@ function cancel(id){
 			                    method:'post',
 			                    valueField:'on_no',
 			                    textField:'on_name',
-			                    panelHeight:'auto'
+			                    panelHeight:'auto',
+			                    async: false
 			            "/>
 				</td>
 				<td>家庭编号：<input id="familyno" size="20"
@@ -82,7 +83,7 @@ function cancel(id){
 			            "/>
 				</td>
 				<td><a href="javascript:void(0)" class="easyui-linkbutton"
-					onclick="submitForm()" icon="icon-search">查询</a> <a href="<%=request.getContextPath()%>/downloadexcel"
+					onclick="submitForm()" icon="icon-search">查询</a> <a href="<%=request.getContextPath()%>/downloadexcel" target="_blank"
 					class="easyui-linkbutton" icon="icon-redo">导出</a></td>
 			</tr>
 		</table>
