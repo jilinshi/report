@@ -33,9 +33,10 @@ public class TempApproveQuery extends HttpServlet {
 		
 	}
 
-	@SuppressWarnings({ "unused", "static-access" })
+	@SuppressWarnings( "static-access" )
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String ds = request.getParameter("ds");
+		ds="cs";
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");

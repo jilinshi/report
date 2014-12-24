@@ -15,15 +15,12 @@
 <head>
 <base href="<%=basePath%>">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/themes/icon.css">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/demo/demo.css">
-<script type="text/javascript" src="<%=basePath%>jquery/jquery.min.js"></script>
-<script type="text/javascript"src="<%=basePath%>jquery/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="<%=basePath%>jquery/locale/easyui-lang-zh_CN.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="jquery/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery/demo/demo.css">
+<script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery/locale/easyui-lang-zh_CN.js"></script>
 <title>临时救助申请</title>
 </head>
 <body>
@@ -37,13 +34,15 @@
     	<td colspan="2"></td>
     </tr>
 	<tr>
-	<td>身份证号码：</td><td><input id="paperid" size="30" class="easyui-textbox" type="text" name="paperid" data-options=""></input></td>
+	<td>身份证号码：</td><td><input id="paperid" size="30" class="easyui-textbox" type="text" name="paperid" ></input></td>
 	</tr>
 	<tr>
 	<td colspan="2">
 		<div style="text-align:center;padding:5px">
-            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">查询</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a>
+			<input type="submit" value="查询">&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="重置">
+<!--             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">查询</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">重置</a> -->
         </div>
 	</td>
 	</tr>

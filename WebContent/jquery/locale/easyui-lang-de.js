@@ -1,64 +1,45 @@
 if ($.fn.pagination){
 	$.fn.pagination.defaults.beforePageText = 'Seite';
 	$.fn.pagination.defaults.afterPageText = 'von {pages}';
-	$.fn.pagination.defaults.displayMsg = '{from} bis {to} von {total} Datensätzen';
+	$.fn.pagination.defaults.displayMsg = 'Angezeigte {from} zu {to} von {total} Artikel';
 }
 if ($.fn.datagrid){
-	$.fn.datagrid.defaults.loadMsg = 'Verarbeitung läuft, bitte warten ...';
+	$.fn.datagrid.defaults.loadMsg = 'Processing, bitte warten ...';
 }
 if ($.fn.treegrid && $.fn.datagrid){
 	$.fn.treegrid.defaults.loadMsg = $.fn.datagrid.defaults.loadMsg;
 }
 if ($.messager){
 	$.messager.defaults.ok = 'OK';
-	$.messager.defaults.cancel = 'Abbruch';
+	$.messager.defaults.cancel = 'Stornieren';
 }
 if ($.fn.validatebox){
-	$.fn.validatebox.defaults.missingMessage = 'Dieses Feld wird benötigt.';
-	$.fn.validatebox.defaults.rules.email.message = 'Bitte geben Sie eine gültige E-Mail-Adresse ein.';
-	$.fn.validatebox.defaults.rules.url.message = 'Bitte geben Sie eine gültige URL ein.';
-	$.fn.validatebox.defaults.rules.length.message = 'Bitte geben Sie einen Wert zwischen {0} und {1} ein.';
+	$.fn.validatebox.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
+	$.fn.validatebox.defaults.rules.email.message = 'Bitte geben Sie eine gültige E-Mail-Adresse.';
+	$.fn.validatebox.defaults.rules.url.message = 'Bitte geben Sie eine gültige URL.';
+	$.fn.validatebox.defaults.rules.length.message = 'Bitte geben Sie einen Wert zwischen {0} und {1}.';
 }
 if ($.fn.numberbox){
-	$.fn.numberbox.defaults.missingMessage = 'Dieses Feld wird benötigt.';
+	$.fn.numberbox.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
 }
 if ($.fn.combobox){
-	$.fn.combobox.defaults.missingMessage = 'Dieses Feld wird benötigt.';
+	$.fn.combobox.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
 }
 if ($.fn.combotree){
-	$.fn.combotree.defaults.missingMessage = 'Dieses Feld wird benötigt.';
+	$.fn.combotree.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
 }
 if ($.fn.combogrid){
-	$.fn.combogrid.defaults.missingMessage = 'Dieses Feld wird benötigt.';
+	$.fn.combogrid.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
 }
 if ($.fn.calendar){
-	$.fn.calendar.defaults.firstDay = 1;
-	$.fn.calendar.defaults.weeks  = ['S','M','D','M','D','F','S'];
-	$.fn.calendar.defaults.months = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+	$.fn.calendar.defaults.weeks = ['S','M','T','W','T','F','S'];
+	$.fn.calendar.defaults.months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 }
 if ($.fn.datebox){
 	$.fn.datebox.defaults.currentText = 'Heute';
 	$.fn.datebox.defaults.closeText = 'Schließen';
 	$.fn.datebox.defaults.okText = 'OK';
-	$.fn.datebox.defaults.missingMessage = 'Dieses Feld wird benötigt.';
-	$.fn.datebox.defaults.formatter = function(date){
-		var y = date.getFullYear();
-		var m = date.getMonth()+1;
-		var d = date.getDate();
-		return (d<10?('0'+d):d)+'.'+(m<10?('0'+m):m)+'.'+y;
-	};
-	$.fn.datebox.defaults.parser = function(s){
-		if (!s) return new Date();
-		var ss = s.split('.');
-		var m = parseInt(ss[1],10);
-		var d = parseInt(ss[0],10);
-		var y = parseInt(ss[2],10);
-		if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
-			return new Date(y,m-1,d);
-		} else {
-			return new Date();
-		}
-	};
+	$.fn.datebox.defaults.missingMessage = 'Dieses Feld ist obligatorisch.';
 }
 if ($.fn.datetimebox && $.fn.datebox){
 	$.extend($.fn.datetimebox.defaults,{

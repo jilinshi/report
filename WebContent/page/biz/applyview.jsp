@@ -1,26 +1,23 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<base href="<%=basePath%>">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/themes/icon.css">
-<link rel="stylesheet" type="text/css"
-	href="<%=basePath%>jquery/demo/demo.css">
-<script type="text/javascript" src="<%=basePath%>jquery/jquery.min.js"></script>
-<script type="text/javascript"src="<%=basePath%>jquery/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="<%=basePath%>jquery/locale/easyui-lang-zh_CN.js"></script>
-<title>临时救助查询</title>
+<base href="<%=basePath%>" >
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>临时救助查询</title>
+	<link rel="stylesheet" type="text/css" href="jquery/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="jquery/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="jquery/demo/demo.css">
+	<script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="jquery/locale/easyui-lang-zh_CN.js"></script>
 </head>
 <script>
 	function apply(fid){
@@ -77,13 +74,12 @@
 	</script>
 <body>
 <div style="padding: 50px 50px 50px 50px;">
-<table id="list_querydata" style="width: 100%; padding: 150px 150px 150px 150px;">
-</table>
+<table id="list_querydata"></table>
 </div>
-<div id="win_app" class="easyui-window" closed="true"  style="width:910px;height:440px;padding:5px;">
-	<div class="easyui-layout" data-options="fit:true">
+	<div id="win_app" class="easyui-window" closed="true" modal="true" style="padding:5px;">
 		<form id="app" method="post" action="<%=request.getContextPath()%>/tempapply">
-           <div data-options="region:'north',split:true" style="width:910px ;height:270px;padding:5px;">
+		<div class="easyui-layout" style="width:910px;height:450px;">
+           <div region="north" split="true" style="width:910px ;height:290px;padding:5px;">
                <div style="padding:5px 5px">
 	            <table cellpadding="4">
 	                <tr>
@@ -94,11 +90,11 @@
 	                	<td>身份证号码：</td>
 	                	<td><input name="paperid" class="easyui-textbox" type="text" disabled="disabled"></input></td>
 	                	<td>救助状态：</td>
-	                	<td><input name="operstate" class="easyui-textbox" type="text" disabled="disabled" size="13px"></input></td>
+	                	<td><input name="operstate" class="easyui-textbox" type="text" disabled="disabled" size="15"></input></td>
 	                </tr>
 	                <tr>
 	                	<td>地址：</td>
-	                    <td colspan="7"><input name="onallname" class="easyui-textbox" type="text" disabled="disabled" size="150px"></input></td>
+	                    <td colspan="7"><input name="onallname" class="easyui-textbox" type="text" disabled="disabled" size="130"></input></td>
 	                </tr>
 	            </table>
 	            <hr noshade color="#0066cc">
@@ -206,10 +202,10 @@
            		<hr noshade color="#0066cc">
 	            </div>
 	        </div>
-            <div data-options="region:'center',split:true" style="width:910px;padding:8px;">
+           		<div region="center" split="true" style="width:910px;padding:8px;">
 	            <table cellpadding="4">
 	            	<tr>
-	            		<td style="font-size:5;font-weight:bold;color:#006699">救助金额：</td>
+	            		<td style="font-size:10;font-weight:bold;color:#006699">救助金额：</td>
 	            		<td colspan="3"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" ></input></td>
 	            	</tr>
 	                <tr>
@@ -222,34 +218,32 @@
 	                </tr>
 	            </table>
             </div>
-            <div data-options="region:'south',border:false" style="text-align:center;padding:5px 0 0;">
-            	<a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="javascript:saveWin_app()" style="width:80px">保存</a>
-                <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="javascript:closeWin_app()" style="width:80px">关闭</a>
+            <div region="south" border="false" style="text-align:center;padding:5px 0;">
+            	<a class="easyui-linkbutton" iconCls="icon-ok" href="javascript:void(0)" onclick="javascript:saveWin_app()" >保存</a>
+                <a class="easyui-linkbutton" iconCls="icon-cancel" href="javascript:void(0)" onclick="javascript:closeWin_app()" >关闭</a>
             </div>
             <input id="familyid" type="hidden" name="familyid" />
-        </form>
-    </div>
+   	 	</div>
+    </form>
+  </div>
 <script>
 //datagrid初始化 
 $('#list_querydata').datagrid({
 	    title:'查询结果',
 	    iconCls:'icon-search',//图标  
-	    url:'<%=request.getContextPath()%>/tempapplyquery',
+	    url:'<%=basePath%>/tempapplyquery?p=<%=request.getAttribute("p")%>',
 		remoteSort : false,
 		singleSelect : true,//是否单选    
 		rownumbers : true,
-		queryParams: {
-			'p': '<%=request.getAttribute("p")%>',
-		},
 		columns:[[  
-				 {field:'mastername',title:'户主姓名',width:'5%'},
-				 {field:'paperid',title:'身份证号码',width:'12%'},
-				 {field:'familyno',title:'家庭编号',width:'10%'},
-				 {field:'operstate',title:'救助状态',width:'5%'},
-				 {field:'percount',title:'家庭人口数',width:'5%'},
-				 {field:'salcount',title:'受助人口数',width:'5%'},
-				 {field:'onallname',title:'地址'},
-				 {field:'opt',title:'操作',align:'center',width:'15%',
+				 {field:'mastername',title:'户主姓名',width:'80'},
+				 {field:'paperid',title:'身份证号码',width:'150'},
+				 {field:'familyno',title:'家庭编号',width:'150'},
+				 {field:'operstate',title:'救助状态',width:'80'},
+				 {field:'percount',title:'家庭人口数',width:'80'},
+				 {field:'salcount',title:'受助人口数',width:'80'},
+				 {field:'onallname',title:'地址',width:'400'},
+				 {field:'opt',title:'操作',align:'center',width:'180',
 	                   formatter:function(value,rec,index){
 	                       var d = '<a href="javascript:void(0)" onclick="apply(\''+ rec.familyid +'\')">申请</a> ';
 	                       d = d+ '&nbsp;&nbsp;&nbsp;&nbsp'
@@ -259,22 +253,12 @@ $('#list_querydata').datagrid({
 	                 }
 				 
         ]],
-		loadFilter: function(data){
-			if (data.d){
-				return data.d;
-			} else {
-				for (var i = 0; i < data.rows.length; i++) {
-					for (var att in data.rows[i]) {
-						if(data.rows[i][att]=="null"){
-							data.rows[i][att]="";
-						}
-		               }
-				}
-				return data;
+        rowStyler:function(index,row,css){
+			if (row.listprice>80){
+				return 'background-color:#6293BB;color:#fff;font-weight:bold;';
 			}
 		}
 });
 </script>
-	
 </body>
 </html>
