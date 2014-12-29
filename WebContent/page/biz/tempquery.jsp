@@ -90,24 +90,6 @@
     	);
     };
 	</script>
-	<script>
-	function viewinfo(id){
-		var win;
-		win = $('#win_view').window({
-			title:"查看",
-			modal:true
-	    });
-		$('#view').form('load','<%=basePath%>/tempapproveinit?tjzid='+id);	
-		win.window('open');
-	
-	};
-	function closeWin_app(){
-		$('#win_view').window('close');
-	};
-	function cancel(id){
-		alert(id);
-	}
-	</script>
 </head>
 <body><div style="padding: 1px 1px 1px 1px">
 		<table cellpadding="1" width="100%">
@@ -290,13 +272,13 @@
 		                <td><input name="aprrovedate2" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
 	                </tr>
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批人：</td>
 		                <td><input name="approveperson3" class="easyui-textbox" type="text" disabled="disabled"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批结果：</td>
 		                <td>
 		                <input name="approveresult3txt" class="easyui-textbox" type="text" disabled="disabled"></input>
 		                </td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批时间：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批时间：</td>
 		                <td><input name="aprrovedate3" class="easyui-textbox" type="text" disabled="disabled" size="30px"></input></td>
 	                </tr>
 	                <tr>
@@ -312,5 +294,23 @@
 		</form>
 	</div>
 </div>
+<script>
+	function viewinfo(id){
+		var win;
+		win = $('#win_view').window({
+			title:"查看",
+			modal:true
+	    });
+		$('#view').form('load','<%=basePath%>/tempapproveinit?tjzid='+id);	
+		win.window('open');
+	
+	};
+	function closeWin_app(){
+		$('#win_view').window('close');
+	};
+	function cancel(id){
+		alert(id);
+	}
+	</script>
 </body>
 </html>

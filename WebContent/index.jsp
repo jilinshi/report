@@ -23,7 +23,7 @@
 <a href="<%=request.getContextPath()%>/page/biz/tempapproveend.jsp?onno=220201&ds=cs&empid=222">临时救助审批（区县）</a>
 <br/>
 <br/>
-<a href="<%=request.getContextPath()%>/page/biz/tempquery.jsp?onno=220202&ds=cs&empid=222">临时救助查询</a>
+<a href="<%=request.getContextPath()%>/page/biz/tempquery.jsp?onno=220201&ds=cs&empid=222">临时救助查询</a>
 </td></tr>
 </table>
 </div>

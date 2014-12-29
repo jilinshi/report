@@ -102,6 +102,7 @@ public class TempApproveInit extends HttpServlet {
 		    	m.setApproveperson1(rs.getString("approveperson1"));
 		    	m.setApproveidea1(rs.getString("approveidea1"));
 		    	m.setAprrovedate1(rs.getString("aprrovedate1"));
+		    	
 		    	m.setApproveresult2(rs.getString("approveresult2"));
 		    	if("1".equals(rs.getString("approveresult2"))){
 		    		m.setApproveresult2txt("同意");
@@ -111,6 +112,7 @@ public class TempApproveInit extends HttpServlet {
 		    	m.setApproveperson2(rs.getString("approveperson2"));
 		    	m.setApproveidea2(rs.getString("approveidea2"));
 		    	m.setAprrovedate2(rs.getString("aprrovedate2"));
+		    	
 		    	m.setApproveresult3(rs.getString("approveresult3"));
 		    	if("1".equals(rs.getString("approveresult3"))){
 		    		m.setApproveresult3txt("同意");
