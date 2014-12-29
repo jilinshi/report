@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -37,14 +38,16 @@ public class TempApplyInit extends HttpServlet {
 
 	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		String ds = (String)session.getAttribute("ds");
+		String onno = (String)session.getAttribute("onno");
 		String paperid = request.getParameter("paperid");
-		String ds = "cs";
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
 		try {
 			response.setContentType("text/html;charset=UTF-8");
 			conn = db.getConnection();
-			String sql ="select count(*) as sum from tempfamiyinfo o where o.paperid='"+paperid+"' ";
+			String sql ="select count(*) as sum from tempfamiyinfo o where o.paperid='"+paperid+"' and o.familyno like '"+onno+"%' ";
 			Statement ps=conn.createStatement();
 		    ResultSet rs=ps.executeQuery(sql);
 		    int sum = 0;

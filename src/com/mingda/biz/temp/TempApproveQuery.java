@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -35,8 +36,9 @@ public class TempApproveQuery extends HttpServlet {
 
 	@SuppressWarnings( "static-access" )
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String ds = request.getParameter("ds");
-		ds="cs";
+		HttpSession session = request.getSession();
+		String ds = (String)session.getAttribute("ds");
+		String onno = (String)session.getAttribute("onno");
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");

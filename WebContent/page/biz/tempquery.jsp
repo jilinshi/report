@@ -5,6 +5,12 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	String onno=request.getParameter("onno");
+	String ds = request.getParameter("ds");
+	String empid = request.getParameter("empid");
+	session.setAttribute("onno", onno);
+	session.setAttribute("ds", ds);
+	session.setAttribute("empid", empid);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -78,7 +84,6 @@
     			familyno: $('#familyno')[0].value,
     			mastername: $('#mastername')[0].value,
     			paperid: $('#paperid')[0].value,
-    			ds: $('#ds').combobox('getValue'),
     			approveend: $('#approveend').combobox('getValue'),
     			orgno: $('#orgno').combobox('getValue')
     		}
@@ -111,7 +116,7 @@
 				
 				<input class="easyui-combobox" id="orgno"
 			name="orgno"
-			url="<%=basePath%>temporg?orgno=220201" 
+			url="<%=basePath%>temporg?orgno=<%=onno %>" 
 			valueField="on_no" 
 			textField="on_name" 
 			panelHeight="auto"  async="false"/>
@@ -122,13 +127,6 @@
 					class="easyui-textbox" type="text" name="mastername"></input></td>
 				<td>身份证号：<input id="paperid" size="25"
 					class="easyui-textbox" type="text" name="paperid"></input></td>
-				<td>来源： 
-					<input class="easyui-combobox" name="ds" id="ds"
-					url='<%=basePath %>page/biz/combobox_ds.json',
-			                    method='get',
-			                    valueField='value',
-			                    textField='text',
-			                    panelHeight='auto'/>
 				<td>审批结果:
 					<input class="easyui-combobox" name="approveend" id="approveend"
 			                    url='<%=basePath %>page/biz/combobox_approveend.json',

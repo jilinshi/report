@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -37,8 +38,10 @@ public class TempApplyQuery extends HttpServlet {
 
 	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		String ds = (String)session.getAttribute("ds");
+		String onno = (String)session.getAttribute("onno");
 		String paperid = request.getParameter("p");
-		String ds = "cs";
 		List<TempfamilyinfoDTO> ms = new ArrayList<TempfamilyinfoDTO>();
 		if(ds==null||"".equals(ds)){
 		}else{

@@ -8,7 +8,12 @@
 	if(msg==null){
 		msg="";
 	}
-	
+	String onno=request.getParameter("onno");
+	String ds = request.getParameter("ds");
+	String empid = request.getParameter("empid");
+	session.setAttribute("onno", onno);
+	session.setAttribute("ds", ds);
+	session.setAttribute("empid", empid);
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html>

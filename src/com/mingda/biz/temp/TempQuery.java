@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import javax.mail.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,16 +36,15 @@ public class TempQuery extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("11111");
 		this.doPost(request, response);
 	}
 
 	@SuppressWarnings({ "static-access", "rawtypes", "unchecked" })
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("22222");
-		String ds = request.getParameter("ds");
-		ds = "cs";
+		HttpSession session = request.getSession();
+		String ds = (String)session.getAttribute("ds");
+		String onno = (String)session.getAttribute("onno");
 		String mastername = request.getParameter("mastername");
 		String paperid = request.getParameter("paperid");
 		String familyno = request.getParameter("familyno");
@@ -86,7 +86,7 @@ public class TempQuery extends HttpServlet {
 					jwhere = jwhere + " and o.approveend='" + approveend + "' ";
 				}
 				if (null == orgno || "".equals(orgno)) {
-
+					jwhere = jwhere + " and o.familyno like '" + onno + "%' ";
 				} else {
 					jwhere = jwhere + " and o.familyno like '" + orgno + "%' ";
 				}
@@ -213,7 +213,7 @@ public class TempQuery extends HttpServlet {
 					map.put("sq", rs.getString("sq"));
 					hm.add(map);
 				}
-				HttpSession session = request.getSession();
+				
 				session.setAttribute("hm", hm);
 				LinkedHashMap title = new LinkedHashMap();
 				title.put("familyno", "¼ÒÍ¥±àºÅ");
@@ -243,7 +243,6 @@ public class TempQuery extends HttpServlet {
 																// Îª"application/x-json"
 				PrintWriter pw = response.getWriter();
 				pw.write(json.toString());
-				System.out.println(json.toString());
 				pw.flush();
 				pw.close();
 			} catch (SQLException e) {

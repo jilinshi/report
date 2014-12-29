@@ -5,6 +5,12 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
+	String onno=request.getParameter("onno");
+	String ds = request.getParameter("ds");
+	String empid = request.getParameter("empid");
+	session.setAttribute("onno", onno);
+	session.setAttribute("ds", ds);
+	session.setAttribute("empid", empid);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -29,7 +35,6 @@
 					class="easyui-textbox" type="text" name="mastername"></input></td>
 				<td>身份证号：<input id="paperid" size="25"
 					class="easyui-textbox" type="text" name="paperid"></input></td>
-				<td>来源:<input id="ds" size="20" class="easyui-textbox" name="ds" type="text" value="cs"></input></td>
 				<td><a href="javascript:void(0)" class="easyui-linkbutton" 
 					onclick="submitForm()" icon="icon-search">查询</a> <a href="javascript:void(0)"
 					class="easyui-linkbutton" onclick="clearForm()" icon="icon-redo">导出</a></td>
@@ -239,12 +244,10 @@
     	$('#list_data').datagrid('load',{
 			familyno: $('#familyno')[0].value,
 			mastername: $('#mastername')[0].value,
-			paperid: $('#paperid')[0].value,
-			ds:$('#ds')[0].value
+			paperid: $('#paperid')[0].value
 		});
     };
    function approve(id){
-	   alert("fff");
     	var win;
     	win = $('#win_app').window({
     		title:"审批",

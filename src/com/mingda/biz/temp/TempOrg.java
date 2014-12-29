@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
@@ -36,8 +37,10 @@ public class TempOrg extends HttpServlet {
 
 	@SuppressWarnings({ "static-access" })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		String orgno = request.getParameter("orgno");
-		JdbcConnection db = new JdbcConnection("cs");
+		String ds = (String)session.getAttribute("ds");
+		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
 		try {
 			response.setContentType("text/html;charset=UTF-8");

@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONObject;
 
@@ -34,8 +35,10 @@ public class TempApproveEnd extends HttpServlet {
 	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		String ds = (String)session.getAttribute("ds");
+		String onno = (String)session.getAttribute("onno");
 		String tjzId = request.getParameter("tjzId");
-		String ds = "cs";
 		String approveperson = request.getParameter("approveperson");
 		String approveresult = request.getParameter("approveresult");
 		String approvemoney = request.getParameter("approvemoney");
