@@ -86,9 +86,9 @@ public class TempQuery extends HttpServlet {
 					jwhere = jwhere + " and o.approveend='" + approveend + "' ";
 				}
 				if (null == orgno || "".equals(orgno)) {
-					jwhere = jwhere + " and o.familyno like '" + onno + "%' ";
+					jwhere = jwhere + " and o.on_no like '" + onno + "%' ";
 				} else {
-					jwhere = jwhere + " and o.familyno like '" + orgno + "%' ";
+					jwhere = jwhere + " and o.on_no like '" + orgno + "%' ";
 				}
 				String sql = "select * from temp_jz o where 1=1" + jwhere;
 				ps = conn.prepareStatement(sql);

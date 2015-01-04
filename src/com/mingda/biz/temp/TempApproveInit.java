@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sf.json.JSONObject;
 
@@ -31,8 +32,9 @@ public class TempApproveInit extends HttpServlet {
 
 	@SuppressWarnings("static-access")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		String tjzid = request.getParameter("tjzid");
-		String ds = "cs";
+		String ds = (String)session.getAttribute("ds");
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
 		try {

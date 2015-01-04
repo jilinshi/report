@@ -171,16 +171,16 @@
             <div region="center" split="true" style="width:910px;padding:8px;">
 	            <table cellpadding="4">
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批人：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
 		                <td><input name="approveperson1" class="easyui-textbox" type="text" disabled="disabled"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批结果：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
 		                <td>
 		                <input name="approveresult1txt" class="easyui-textbox" type="text" disabled="disabled"></input>
 		                </td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批时间：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批时间：</td>
 		                <td><input name="aprrovedate1" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
 	                </tr>
-	                <tr>
+	                <!-- <tr>
 		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
 		                <td><input name="approveperson2" class="easyui-textbox" type="text" disabled="disabled"></input></td>
 		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
@@ -189,7 +189,7 @@
 		                </td>
 		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批时间：</td>
 		                <td><input name="aprrovedate2" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
-	                </tr>
+	                </tr> -->
 	                <tr>
 	            		<td style="font-size:5;font-weight:bold;color:#006699">救助金额：</td>
 	            		<td colspan="5"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" ></input></td>

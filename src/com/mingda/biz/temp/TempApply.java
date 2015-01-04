@@ -183,7 +183,7 @@ public class TempApply extends HttpServlet {
 			pst.setString(57, "");
 			pst.setString(58, "");
 			pst.setString(59, "");
-			pst.setString(60, "1");
+			pst.setString(60, "2");
 			UUID uuid = UUID.randomUUID();
 			pst.setString(61, uuid.toString());
 			pst.setTimestamp(62, new Timestamp(new Date().getTime()));
