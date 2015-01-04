@@ -47,7 +47,7 @@ public class TempApplyInit extends HttpServlet {
 		try {
 			response.setContentType("text/html;charset=UTF-8");
 			conn = db.getConnection();
-			String sql ="select count(*) as sum from tempfamiyinfo o where o.paperid='"+paperid+"' and o.familyno like '"+onno+"%' ";
+			String sql ="select count(*) as sum from tempfamiyinfo o where o.paperid='"+paperid+"' and o.on_no like '"+onno+"%' ";
 			Statement ps=conn.createStatement();
 		    ResultSet rs=ps.executeQuery(sql);
 		    int sum = 0;

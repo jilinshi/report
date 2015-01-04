@@ -272,13 +272,13 @@
 		                <td><input name="aprrovedate2" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
 	                </tr>
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批人：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批人：</td>
 		                <td><input name="approveperson3" class="easyui-textbox" type="text" disabled="disabled"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批结果：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批结果：</td>
 		                <td>
 		                <input name="approveresult3txt" class="easyui-textbox" type="text" disabled="disabled"></input>
 		                </td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">社区审批时间：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批时间：</td>
 		                <td><input name="aprrovedate3" class="easyui-textbox" type="text" disabled="disabled" size="30px"></input></td>
 	                </tr>
 	                <tr>
