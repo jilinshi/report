@@ -47,10 +47,10 @@
 									 return '<span style="color:red;">'+value+'</span>';
 								 },
 							 width:'80' },
-							 {field:'approveresult1txt',title:'社区审批意见',width:'80'},
-							 {field:'aprrovedate1',title:'社区审批时间',width:'80'},
-							 {field:'approveresult2txt',title:'街道审批意见',width:'80'},
-							 {field:'aprrovedate2',title:'街道审批时间',width:'80'},
+							 {field:'approveresult1txt',title:'街道审批意见',width:'80'},
+							 {field:'aprrovedate1',title:'街道审批时间',width:'80'},
+/* 							 {field:'approveresult2txt',title:'街道审批意见',width:'80'},
+							 {field:'aprrovedate2',title:'街道审批时间',width:'80'}, */
 							 {field:'approveresult3txt',title:'区县审批意见',width:'80'},
 							 {field:'aprrovedate3',title:'区县审批时间',width:'80'},
 							 {field:'approveendtxt',title:'审批结果',
