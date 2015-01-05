@@ -39,7 +39,7 @@
     	<td colspan="2"></td>
     </tr>
 	<tr>
-	<td>身份证号码：</td><td><input id="paperid" size="30" class="easyui-textbox" type="text" name="paperid" ></input></td>
+	<td>户主身份证号码：</td><td><input id="paperid" size="30" class="easyui-textbox" type="text" name="paperid" ></input></td>
 	</tr>
 	<tr>
 	<td colspan="2">

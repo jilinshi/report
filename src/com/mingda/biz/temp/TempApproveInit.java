@@ -130,6 +130,7 @@ public class TempApproveInit extends HttpServlet {
 		    	m.setApproveend(rs.getString("approveend"));
 		    	m.setUpdatetime(rs.getString("updatetime"));
 		    	m.setApprovemoney(rs.getString("approvemoney"));
+		    	m.setApplymoney(rs.getString("applymoney"));
 		    	ms.add(m);
 	        }
 		    JSONObject json = new JSONObject();

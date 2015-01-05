@@ -42,28 +42,33 @@
 							 {field:'paperid',title:'身份证号码',width:'140'},
 							 {field:'familyno',title:'家庭编号',width:'80'},
 							 {field:'operstate',title:'救助状态',width:'80'},
-							 {field:'approvemoney',title:'救助金额',
+							 {field:'approveresult1txt',title:'乡镇（街道）审核意见',width:'140'},
+							 {field:'aprrovedate1',title:'乡镇（街道）审核时间',width:'140'},
+							 {field:'applymoney',title:'拟救助金额', 
 								 formatter:function(value,rec,index){
-									 return '<span style="color:red;">'+value+'</span>';
-								 },
-							 width:'80' },
-							 {field:'approveresult1txt',title:'街道审批意见',width:'80'},
-							 {field:'aprrovedate1',title:'街道审批时间',width:'80'},
+								 	 return '<span style="color:blue;font-weight:bold;">'+value+'</span>';
+							 	 },
+						 	 width:'80' },
 /* 							 {field:'approveresult2txt',title:'街道审批意见',width:'80'},
 							 {field:'aprrovedate2',title:'街道审批时间',width:'80'}, */
-							 {field:'approveresult3txt',title:'区县审批意见',width:'80'},
-							 {field:'aprrovedate3',title:'区县审批时间',width:'80'},
+							 {field:'approveresult3txt',title:'区级审批意见',width:'80'},
+							 {field:'aprrovedate3',title:'区级审批时间',width:'80'},
 							 {field:'approveendtxt',title:'审批结果',
 								 formatter:function(value,rec,index){
 									 return '<span style="color:red;">'+value+'</span>';
 								 }
 							 ,width:'80'},
+							 {field:'approvemoney',title:'救助金额',
+								 formatter:function(value,rec,index){
+									 return '<span style="color:red;font-weight:bold;">'+value+'</span>';
+								 },
+							 width:'80' },
 							 {field:'opt',title:'操作',align:'center', width:'80',
 				                   formatter:function(value,rec,index){
 				                       var d = '<a href="javascript:void(0)" onclick="viewinfo(\''+ rec.tjzId +'\')">查看</a> ';
 				                       var orgno="220201";
 				                       if(orgno.length==6){
-				                    	   /* d = d+'<a href="javascript:void(0)" onclick="cancel(\''+ rec.tjzId +'\')">作废</a> '; */
+				                    	  d = d+'<a href="javascript:void(0)" onclick="cancel(\''+ rec.tjzId +'\')">作废</a> ';
 				                       }
 				                       return d;
 				                   }
@@ -126,8 +131,8 @@
 <table id="list_data"></table>
 	<div id="win_view" class="easyui-window" closed="true" modal="true" style="padding:5px;">
 	<form id="view" name="view" method="post">
-	<div class="easyui-layout" style="width:910px;height:530px;">
-			<div region="north" split="true" style="width:910px ;height:290px;padding:5px;">
+	<div class="easyui-layout" style="width:930px;height:560px;">
+			<div region="north" split="true" style="width:930px ;height:290px;padding:5px;">
 			<div style="padding:5px 5px">
 	            <table cellpadding="4">
 	                <tr>
@@ -249,17 +254,26 @@
            		<hr noshade color="#0066cc">
 	            </div>
 			</div>
-			<div region="center" split="true" style="width:910px;padding:8px;">
+			<div region="center" split="true" style="width:930px;padding:8px;">
 				<table cellpadding="4">
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
+		                <td width="20%" style="font-size:5;font-weight:bold;color:#006699">乡镇（街道）审核人：</td>
 		                <td><input name="approveperson1" class="easyui-textbox" type="text" disabled="disabled"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批结果：</td>
-		                <td>
-		                <input name="approveresult1txt" class="easyui-textbox" type="text" disabled="disabled"></input>
-		                </td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批时间：</td>
+		                <td width="20%" style="font-size:5;font-weight:bold;color:#006699">乡镇（街道）审核意见：</td>
+		                <td><input name="approveresult1txt" class="easyui-textbox" type="text" disabled="disabled"></input></td>
+		                <td width="20%" style="font-size:5;font-weight:bold;color:#006699">乡镇（街道）审核时间：</td>
 		                <td><input name="aprrovedate1" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
+	                </tr>
+	                <tr>
+	            		<td width="20%" style="font-size:5;font-weight:bold;color:#006699">乡镇（街道）走访记录：</td>
+	            		<td colspan="5"><textarea id="approveidea1" name="approveidea1" style="height:30px;width:600px" disabled="disabled"></textarea></td>
+	            	</tr>
+	                <tr>
+	                	<td width="20%" style="font-size:5;font-weight:bold;color:#336633">拟救助金额：</td>
+		                <td colspan="5"><input name="applymoney" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
+	                </tr>
+	                <tr>
+	                	<td colspan="6"><hr noshade color="#9999cc"></td>
 	                </tr>
 	                <!-- <tr>
 		                <td style="font-size:5;font-weight:bold;color:#006699">街道审批人：</td>
@@ -272,17 +286,17 @@
 		                <td><input name="aprrovedate2" class="easyui-textbox" type="text" disabled="disabled" size="30px"></td>
 	                </tr> -->
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批人：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区级审批人：</td>
 		                <td><input name="approveperson3" class="easyui-textbox" type="text" disabled="disabled"></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批结果：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区级审批结果：</td>
 		                <td>
 		                <input name="approveresult3txt" class="easyui-textbox" type="text" disabled="disabled"></input>
 		                </td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">区县审批时间：</td>
+		                <td style="font-size:5;font-weight:bold;color:#006699">区级审批时间：</td>
 		                <td><input name="aprrovedate3" class="easyui-textbox" type="text" disabled="disabled" size="30px"></input></td>
 	                </tr>
 	                <tr>
-	            		<td style="font-size:5;font-weight:bold;color:#006699">救助金额：</td>
+	            		<td style="font-size:5;font-weight:bold;color:#red">救助金额：</td>
 	            		<td colspan="5"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" disabled="disabled"></input></td>
 	            	</tr>
 	            </table>
@@ -308,8 +322,27 @@
 	function closeWin_app(){
 		$('#win_view').window('close');
 	};
-	function cancel(id){
-		alert(id);
+	function cancel(tjzId){
+		$.ajax({
+            type: "POST",
+            url: '<%=request.getContextPath()%>/tempapprovedelete',
+            dataType: "json",
+            async: false,
+            data: {
+    			'tjzId': tjzId
+    		},
+            
+            success: function(json){
+            	var jsonObj = eval(json);
+            	var result =jsonObj["result"];
+            	if(result=="1"){
+            		$.messager.alert('消息','作废成功！');
+            		submitForm();
+            	}else{
+            		$.messager.alert('消息','作废失败！');
+            	}
+            }
+    	});
 	}
 	</script>
 </body>

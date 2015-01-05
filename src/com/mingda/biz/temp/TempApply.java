@@ -48,7 +48,8 @@ public class TempApply extends HttpServlet {
 		String familyid = request.getParameter("familyid");
 		String approveperson = request.getParameter("approveperson");
 		String approveresult = request.getParameter("approveresult");
-		String approvemoney = request.getParameter("approvemoney");
+		String approveidea = request.getParameter("approveidea");
+		String applymoney = request.getParameter("applymoney");
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
 		try {
@@ -119,9 +120,9 @@ public class TempApply extends HttpServlet {
 			TempfamilyinfoDTO tfdto = new TempfamilyinfoDTO();
 			tfdto = ms.get(0);
 			String sql_insert = "insert into temp_jz "
-					+ " (tjz_id, familyid, familyno, masterid, mastername, paperid, percount, salcount, operstate, on_no, famsort, accounts, onallname, fde, fdefamilyno, fdename, f_income, fm_sex, fmage, f_familyid, xm_jtcy0, sfzh_jtcy0, rel0, res0, body0, xm_jtcy1, sfzh_jtcy1, rel1, res1, body1, xm_jtcy2, sfzh_jtcy2, rel2, res2, body2, xm_jtcy3, sfzh_jtcy3, rel3, res3, body3, xm_jtcy4, sfzh_jtcy4, rel4, res4, body4, qx, jd, sq, approveresult1, approveperson1, approveidea1, aprrovedate1, approveresult2, approveperson2, approveidea2, aprrovedate2, approveresult3, approveperson3, approveidea3, aprrovedate3, approvegoto, serialno, createtime, approveend, updatetime, approvemoney) "
+					+ " (tjz_id, familyid, familyno, masterid, mastername, paperid, percount, salcount, operstate, on_no, famsort, accounts, onallname, fde, fdefamilyno, fdename, f_income, fm_sex, fmage, f_familyid, xm_jtcy0, sfzh_jtcy0, rel0, res0, body0, xm_jtcy1, sfzh_jtcy1, rel1, res1, body1, xm_jtcy2, sfzh_jtcy2, rel2, res2, body2, xm_jtcy3, sfzh_jtcy3, rel3, res3, body3, xm_jtcy4, sfzh_jtcy4, rel4, res4, body4, qx, jd, sq, approveresult1, approveperson1, approveidea1, aprrovedate1, approveresult2, approveperson2, approveidea2, aprrovedate2, approveresult3, approveperson3, approveidea3, aprrovedate3, approvegoto, serialno, createtime, approveend, updatetime, approvemoney, applymoney) "
 					+ " values "
-					+ " (XTJZ_ID.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+					+ " (XTJZ_ID.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
 
 			PreparedStatement pst = conn.prepareStatement(sql_insert);
 			pst.setString(1, tfdto.getFamilyid());
@@ -173,7 +174,7 @@ public class TempApply extends HttpServlet {
 			pst.setString(47, tfdto.getSq());
 			pst.setString(48, approveresult);
 			pst.setString(49, approveperson);
-			pst.setString(50, "");
+			pst.setString(50, approveidea);
 			pst.setTimestamp(51, new Timestamp(new Date().getTime())); 
 			pst.setString(52, "");
 			pst.setString(53, "");
@@ -189,7 +190,8 @@ public class TempApply extends HttpServlet {
 			pst.setTimestamp(62, new Timestamp(new Date().getTime()));
 			pst.setString(63, "");
 			pst.setTimestamp(64, new Timestamp(new Date().getTime()));
-			pst.setString(65, approvemoney);
+			pst.setString(65, "");
+			pst.setString(66, applymoney);
 			int i = pst.executeUpdate();
 			JSONObject json = new JSONObject();
 			if(i>0){

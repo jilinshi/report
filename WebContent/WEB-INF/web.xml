@@ -103,4 +103,12 @@
 		<servlet-name>downloadexcel</servlet-name>
 		<url-pattern>/downloadexcel</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>tempapprovedelete</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApproveDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapprovedelete</servlet-name>
+		<url-pattern>/tempapprovedelete</url-pattern>
+	</servlet-mapping>
 </web-app>

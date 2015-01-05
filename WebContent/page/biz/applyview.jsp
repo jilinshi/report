@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="jquery/jquery.easyui.min.js"></script>
 	<script type="text/javascript" src="jquery/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="js/validate.js"></script>
 </head>
 <script>
 	function apply(fid){
@@ -35,6 +36,7 @@
     function saveWin_app(){
     	var approveperson = document.getElementById("approveperson").value;
      	var approveresultname = document.getElementsByName("approveresult");
+     	var approveidea = document.getElementById("approveidea").value;
      	var approveresult=0;
      	var familyid = document.getElementById("familyid").value;
      	for(var i = 0; i < approveresultname.length; i++)
@@ -42,7 +44,28 @@
    	     	if(approveresultname[i].checked)
    	     	approveresult=approveresultname[i].value;
      	}
-     	var approvemoney = document.getElementById("approvemoney").value;
+     	var applymoney = document.getElementById("applymoney").value;
+     	
+    	//验证
+    	if(applymoney==""){
+    		$.messager.alert('提示','请输入拟救助金额！');
+    		return;
+    	}else if(!isNumber(applymoney)){
+    		$.messager.alert('提示','拟救助金额，请输入阿拉伯数字！');
+    		return;
+    	}
+    	if(approveidea==""){
+    		$.messager.alert('提示','请输入走访记录！');
+    		return;
+    	}else if(approveidea.length<20){
+    		$.messager.alert('提示','输入内容不能少于20字！');
+    		return;
+    	}
+    	if(approveperson==""){
+    		$.messager.alert('提示','请输入审核人！');
+    		return;
+    	}
+     	
     	$.ajax({
             type: "POST",
             url: '<%=request.getContextPath()%>/tempapply',
@@ -51,7 +74,8 @@
             data: {
     			'approveperson': approveperson,
     			'approveresult': approveresult,
-    			'approvemoney': approvemoney,
+    			'applymoney': applymoney,
+    			'approveidea': approveidea,
     			'familyid': familyid
     		},
             
@@ -78,7 +102,7 @@
 </div>
 	<div id="win_app" class="easyui-window" closed="true" modal="true" style="padding:5px;">
 		<form id="app" method="post" action="<%=request.getContextPath()%>/tempapply">
-		<div class="easyui-layout" style="width:910px;height:450px;">
+		<div class="easyui-layout" style="width:910px;height:460px;">
            <div region="north" split="true" style="width:910px ;height:290px;padding:5px;">
                <div style="padding:5px 5px">
 	            <table cellpadding="4">
@@ -205,13 +229,22 @@
            		<div region="center" split="true" style="width:910px;padding:8px;">
 	            <table cellpadding="4">
 	            	<tr>
-	            		<td style="font-size:10;font-weight:bold;color:#006699">救助金额：</td>
-	            		<td colspan="3"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" ></input></td>
+	            		<td width="11%" style="font-size:5;font-weight:bold;color:red">拟救助金额：</td>
+	            		<td width="15%"><input id="applymoney" name="applymoney" class="easyui-textbox" type="text" ></input></td>
+	            		<td colspan="2" style="font-size:4;color:#666666;text-align:left">
+	            			(备注)
+	            		</td>
+	            	</tr>
+	            	<tr>
+	            		<td width="11%" style="font-size:5;font-weight:bold;color:#006699">走访记录：</td>
+	            		<td colspan="3"><textarea id="approveidea" name="approveidea" style="height:30px;width:600px"></textarea>
+	            		&nbsp;&nbsp;<font style="font-size:4;color:#666666;text-align:left">(备注:内容不能少于20个字。)</font>
+	            		</td>
 	            	</tr>
 	                <tr>
-		                <td style="font-size:5;font-weight:bold;color:#006699">审批人：</td>
-		                <td><input id="approveperson" name="approveperson" class="easyui-textbox" type="text" ></input></td>
-		                <td style="font-size:5;font-weight:bold;color:#006699">审批结果：</td>
+		                <td width="11%" style="font-size:5;font-weight:bold;color:#006699">审核人：</td>
+		                <td width="15%"><input id="approveperson" name="approveperson" class="easyui-textbox" type="text" ></input></td>
+		                <td width="11%" style="font-size:5;font-weight:bold;color:#006699">审核意见：</td>
 		                <td><input type="radio" name="approveresult" value="1" checked="checked">同意
 		                	<input type="radio" name="approveresult" value="0">不同意
 		                </td>

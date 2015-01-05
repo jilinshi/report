@@ -6,13 +6,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import javax.mail.Session;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -196,11 +195,20 @@ public class TempQuery extends HttpServlet {
 						m.setApproveendtxt("同意救助");
 					} else if ("0".equals(rs.getString("approveend"))) {
 						m.setApproveendtxt("不同意救助");
-					} else if ("-1".equals(rs.getString("approveend"))) {
-						m.setApproveendtxt("作废");
 					}
 					m.setUpdatetime(rs.getString("updatetime"));
-					m.setApprovemoney(rs.getString("approvemoney"));
+					DecimalFormat df1 = new DecimalFormat("##########0.00");
+					if(null==rs.getString("approvemoney")||"".equals(rs.getString("approvemoney"))){
+						m.setApprovemoney("");
+					}else{
+						m.setApprovemoney(df1.format(rs.getBigDecimal("approvemoney")));
+					}
+					if(null==rs.getString("applymoney")||"".equals(rs.getString("applymoney"))){
+						m.setApplymoney("");
+					}else{
+						m.setApplymoney(df1.format(rs.getBigDecimal("applymoney")));
+					}
+					
 					ms.add(m);
 					// 打印
 					HashMap map = new HashMap();

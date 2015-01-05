@@ -73,6 +73,7 @@ public class TempJzDTO {
 	private String approveendtxt;
 	private String updatetime;
 	private String approvemoney;
+	private String applymoney;
 	public String getFamilyid() {
 		return familyid;
 	}
@@ -494,6 +495,12 @@ public class TempJzDTO {
 	}
 	public void setApproveendtxt(String approveendtxt) {
 		this.approveendtxt = approveendtxt;
+	}
+	public String getApplymoney() {
+		return applymoney;
+	}
+	public void setApplymoney(String applymoney) {
+		this.applymoney = applymoney;
 	}
 	
 	
