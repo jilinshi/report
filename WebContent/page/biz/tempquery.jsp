@@ -296,7 +296,7 @@
 		                <td><input name="aprrovedate3" class="easyui-textbox" type="text" disabled="disabled" size="30px"></input></td>
 	                </tr>
 	                <tr>
-	            		<td style="font-size:5;font-weight:bold;color:#red">救助金额：</td>
+	            		<td style="font-size:5;font-weight:bold;color:red">救助金额：</td>
 	            		<td colspan="5"><input id="approvemoney" name="approvemoney" class="easyui-textbox" type="text" disabled="disabled"></input></td>
 	            	</tr>
 	            </table>
