@@ -30,7 +30,7 @@
 </head>
 <body>
 <div style="padding: 100px 20px 20px 20px;">
-	<form id="apply" method="post" action="TempApplyInit" target="_self">
+	<form id="apply" method="post" action="<%=request.getContextPath()%>/tempapplyinit" target="_self">
 	<table cellpadding="5" align="center">
 	<tr>
         <td align="CENTER" colspan="2"><font color="#0099FF" style="font-size:25px">临&nbsp;&nbsp;时&nbsp;&nbsp;救&nbsp;&nbsp;助</font></td>

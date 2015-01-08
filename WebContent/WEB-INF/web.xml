@@ -111,4 +111,12 @@
 		<servlet-name>tempapprovedelete</servlet-name>
 		<url-pattern>/tempapprovedelete</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>tempapplyinit</servlet-name>
+		<servlet-class>com.mingda.biz.temp.TempApplyInit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>tempapplyinit</servlet-name>
+		<url-pattern>/tempapplyinit</url-pattern>
+	</servlet-mapping>
 </web-app>
