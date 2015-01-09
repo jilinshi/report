@@ -3,7 +3,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="5"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="2669"/>
 	<parameter name="fid" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -159,7 +159,7 @@
 				<textElement verticalAlignment="Middle">
 					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[审批时间：          年    月    日]]></text>
+				<text><![CDATA[审批时间：			年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="686" width="554" height="30" uuid="b1e0d070-d562-4b25-a69d-946429330f4f"/>
@@ -1227,19 +1227,20 @@
 				<text><![CDATA[申请救助诚信承诺书]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="30" y="486" width="500" height="107" uuid="ad418d18-a69b-40c3-9138-b78651314e6e"/>
+				<reportElement mode="Transparent" x="30" y="486" width="500" height="107" uuid="ad418d18-a69b-40c3-9138-b78651314e6e"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="styled">
+					<font fontName="宋体" size="12" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2" firstLineIndent="15"/>
 				</textElement>
 				<text><![CDATA[    本人因家庭生活困难，特申请临时救助。本人承诺在本表中所填列的全部内容及所提供的全部证明材料均真实、可靠、绝无虚假、欺骗和隐瞒，如经管理审批机关及其办事机构核查存在不实之处，愿承担一切后果并接受一切处罚。
-                                           申请人（签字并按手印）：
-                                                             年      月      日]]></text>
+							申请人（签字并按手印）：
+										年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="140" y="606" width="280" height="30" uuid="90ceeb6c-9055-4aa7-b143-fe255d62cfba"/>
@@ -1258,11 +1259,11 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="1_1_2" firstLineIndent="15"/>
 				</textElement>
 				<text><![CDATA[    为了验证本人所提供的全部证明材料均真实、可靠，绝无虚假、欺骗和隐瞒，同意社会救助管理审批机关及其办事机构与有关部门对本人及家庭收入、财产住房信息进行核查。
-
-					          委托人（签字并按手印）：
-                                                              年      月      日]]></text>
+							委托人（签字并按手印）：
+										年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="230" y="91" width="100" height="30" uuid="7cd9ad42-3981-45f5-91fc-73018defe008"/>
@@ -1432,15 +1433,14 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-					<paragraph leftIndent="10"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[    经调查，该家庭总人口   人，家庭月总收入    元，月人均收入    元。
+				<text><![CDATA[	经调查，该家庭总人口	人，家庭月总收入		元，月人均收入		元。
+	因			申请救助，有材料证明，符合临时救助条件，同意上报此乡镇（街道）社会救助服务中心。
 
-因         申请救助，有材料证明，符合临时救助条件，同意上报此乡镇（街道）社会救助服务中心。
+		经办人（签字）：			负责人（签字）：
 
-              经办人（签字）：              负责人（签字）：
-
-              村（居）民委员会（盖章）      日期：     年    月    日]]></text>
+		村（居）民委员会（盖章）：	日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="70" y="225" width="476" height="130" uuid="7e3cd05c-d97a-4228-9ac2-68b9b1860a67"/>
@@ -1452,13 +1452,12 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-					<paragraph leftIndent="10"/>
 				</textElement>
-				<text><![CDATA[    经审核，该家庭符合临时救助条件，建议给予该家庭临时救助            元，同意上报区社会救助事业中心。
+				<text><![CDATA[	经审核，该家庭符合临时救助条件，建议给予该家庭临时救助		元，同意上报区社会救助事业中心。
 
-              经办人（签字）：              负责人（签字）：
+		经办人（签字）：			负责人（签字）：
 
-              街道办事处（盖章）            日期：     年    月    日]]></text>
+		街道办事处（盖章）：		日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="225" width="60" height="130" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
@@ -1501,13 +1500,12 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-					<paragraph leftIndent="10"/>
 				</textElement>
-				<text><![CDATA[    经审核，该家庭符合临时救助条件，同意给予该家庭临时救助      元。
+				<text><![CDATA[	经审核，该家庭符合临时救助条件，同意给予该家庭临时救助		元。
 
-              经办人（签字）：              负责人（签字）：
+		经办人（签字）：			负责人（签字）：
 
-          区社会救助事业中心（盖章）        日期：     年    月    日]]></text>
+	区社会救助事业中心（盖章）：		日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="573" width="60" height="167" uuid="9bcfcefd-f17f-409b-be82-01612c5992ec">
@@ -1536,17 +1534,16 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-					<paragraph leftIndent="10"/>
 				</textElement>
-				<text><![CDATA[    本人已通过               （现场/银行）领取临时救助           元。
+				<text><![CDATA[	本人已通过		（现场/银行）领取临时救助		元。
 
-    申请人或受委托人签字（盖章）：      领取日期：     年    月    日
+申请人或受委托人签字（盖章）：		领取日期：		年	月	日
 
----------------------------------------------------------------------
 
-    临时救助申请人账户信息：
 
-    账号名：          账户：                   联系电话：]]></text>
+	临时救助申请人账户信息：
+
+账号名：		账户：				联系电话：]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="464" width="60" height="109" uuid="dc4ca73e-4692-4093-8b08-8d0e14223290">
@@ -1575,13 +1572,159 @@
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-					<paragraph leftIndent="10"/>
 				</textElement>
-				<text><![CDATA[    经局资金审批小组评议，同意给予       临时救助，救助金额      元。
+				<text><![CDATA[	经局资金审批小组评议，同意给予		临时救助，救助金额		元。
 
-              审批小组成员（签字）：
+		审批小组成员（签字）：
 
-                                            日期：     年    月    日]]></text>
+							日期：		年	月	日]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="648" width="476" height="20" uuid="1665e59b-1bae-4e2d-93dc-b28cfb29a972"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="95" width="27" height="20" uuid="115212df-7a49-45a6-b541-ab544cf2b436"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="95" width="50" height="20" uuid="e5541987-3aa2-4faa-b3c3-fb3053912e32"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="110" width="72" height="20" uuid="049c84c3-2877-4963-a141-216bb8bf6e8a"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="124" width="102" height="20" uuid="5af9f96d-55f6-4091-95dc-caf315f1e112"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="241" width="38" height="20" uuid="85270ead-1e98-4cb1-a1c5-927dda533339"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="369" width="38" height="20" uuid="699c3890-5363-45d5-bfee-419a2549f867"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="478" width="37" height="20" uuid="b1423e5f-0458-4b1a-a877-1f15490c7812"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="478" width="39" height="20" uuid="bdf071e7-135d-4b57-9d1f-71cbfd3e294a"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="587" width="62" height="20" uuid="c6c5d6df-6560-43f2-b012-98cb3c937036"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="587" width="74" height="20" uuid="ed072fd5-98cb-4bf9-951b-95f25d8e2e54"/>
+				<box bottomPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
 		<band height="751">
