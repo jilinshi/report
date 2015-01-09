@@ -3,7 +3,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="5"/>
-	<property name="ireport.y" value="2669"/>
+	<property name="ireport.y" value="2609"/>
 	<parameter name="fid" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -1457,7 +1457,7 @@
 
 		经办人（签字）：			负责人（签字）：
 
-		街道办事处（盖章）：		日期：		年	月	日]]></text>
+乡镇（街道）社会救助服务中心（盖章）：	日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="225" width="60" height="130" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
@@ -1543,7 +1543,7 @@
 
 	临时救助申请人账户信息：
 
-账号名：		账户：				联系电话：]]></text>
+账户名：		账号：				联系电话：]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="10" y="464" width="60" height="109" uuid="dc4ca73e-4692-4093-8b08-8d0e14223290">
@@ -1888,7 +1888,7 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[5.由乡镇出具的突发性、临时性困难的证明材料；]]></text>
+				<text><![CDATA[5.由乡镇（街道）出具的突发性、临时性困难的证明材料；]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="20" y="704" width="510" height="20" uuid="8fd4477c-7f66-4d1d-a184-83f9e59b2251"/>
