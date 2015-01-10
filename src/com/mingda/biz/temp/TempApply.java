@@ -6,14 +6,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,30 +19,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.mingda.database.JdbcConnection;
 import com.mingda.dto.TempfamilyinfoDTO;
 
-
 @WebServlet(name = "TempApply", urlPatterns = { "/TempApply" })
 public class TempApply extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public TempApply() {
-        super();
-    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	public TempApply() {
+		super();
 	}
 
-	@SuppressWarnings("static-access")
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+	}
+
+	@SuppressWarnings({ "static-access", "resource" })
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		String ds = (String)session.getAttribute("ds");
-		String onno = (String)session.getAttribute("onno");
+		String ds = (String) session.getAttribute("ds");
+		String onno = (String) session.getAttribute("onno");
 		String familyid = request.getParameter("familyid");
 		String approveperson = request.getParameter("approveperson");
 		String approveresult = request.getParameter("approveresult");
@@ -52,15 +50,18 @@ public class TempApply extends HttpServlet {
 		String applymoney = request.getParameter("applymoney");
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
+		PreparedStatement ps = null;
+		PreparedStatement pst = null;
+		ResultSet rs = null;
 		try {
 			response.setContentType("text/html;charset=UTF-8");
 			conn = db.getConnection();
 			String sql = "select * from tempfamiyinfo o where o.familyid='"
 					+ familyid + "' ";
-			Statement ps = conn.createStatement();
-			ResultSet rs = ps.executeQuery(sql);
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
 			List<TempfamilyinfoDTO> ms = new ArrayList<TempfamilyinfoDTO>();
-			while (rs.next()) {
+			if (rs.next()) {
 				TempfamilyinfoDTO m = new TempfamilyinfoDTO();
 				m.setFamilyid(rs.getString("familyid"));
 				m.setFamilyno(rs.getString("familyno"));
@@ -115,6 +116,69 @@ public class TempApply extends HttpServlet {
 				m.setJd(rs.getString("jd"));
 				m.setSq(rs.getString("sq"));
 				ms.add(m);
+			} else {
+				sql = "select *  from tempfamiyinfo1 t where t.FAMILYID = '"
+						+ familyid + "'   and t.ON_NO like '" + onno + "%'";
+				ps = conn.prepareStatement(sql);
+				rs = ps.executeQuery();
+
+				if (rs.next()) {
+					TempfamilyinfoDTO m = new TempfamilyinfoDTO();
+					m.setFamilyid(rs.getString("familyid"));
+					m.setFamilyno(rs.getString("familyno"));
+					m.setMasterid(rs.getString("masterid"));
+					m.setMastername(rs.getString("mastername"));
+					m.setPaperid(rs.getString("paperid"));
+					m.setPercount(rs.getString("percount"));
+					m.setSalcount(rs.getString("salcount"));
+					m.setOperstate(rs.getString("operstate"));
+					m.setOn_no(rs.getString("on_no"));
+					m.setFamsort(rs.getString("famsort"));
+					m.setAccounts(rs.getString("accounts"));
+					m.setOnallname(rs.getString("onallname"));
+					m.setFde(rs.getString("fde"));
+					m.setFdefamilyno(rs.getString("fdefamilyno"));
+					m.setFdename(rs.getString("fdename"));
+					m.setIsybsqdb(rs.getString("isybsqdb"));
+					m.setBankname(rs.getString("bankname"));
+					m.setBanktime(rs.getString("banktime"));
+					m.setBankdate(rs.getString("bankdate"));
+					m.setBanktype(rs.getString("banktype"));
+					m.setF_income(rs.getString("f_income"));
+					m.setFm_sex(rs.getString("fm_sex"));
+					m.setFmage(rs.getString("fmage"));
+					m.setF_familyid(rs.getString("f_familyid"));
+					m.setXm_jtcy0(rs.getString("xm_jtcy0"));
+					m.setSfzh_jtcy0(rs.getString("sfzh_jtcy0"));
+					m.setRel0(rs.getString("rel0"));
+					m.setRes0(rs.getString("res0"));
+					m.setBody0(rs.getString("body0"));
+					m.setXm_jtcy1(rs.getString("xm_jtcy1"));
+					m.setSfzh_jtcy1(rs.getString("sfzh_jtcy1"));
+					m.setRel1(rs.getString("rel1"));
+					m.setRes1(rs.getString("res1"));
+					m.setBody1(rs.getString("body1"));
+					m.setXm_jtcy2(rs.getString("xm_jtcy2"));
+					m.setSfzh_jtcy2(rs.getString("sfzh_jtcy2"));
+					m.setRel2(rs.getString("rel2"));
+					m.setRes2(rs.getString("res2"));
+					m.setBody2(rs.getString("body2"));
+					m.setXm_jtcy3(rs.getString("xm_jtcy3"));
+					m.setSfzh_jtcy3(rs.getString("sfzh_jtcy3"));
+					m.setRel3(rs.getString("rel3"));
+					m.setRes3(rs.getString("res3"));
+					m.setBody3(rs.getString("body3"));
+					m.setXm_jtcy4(rs.getString("xm_jtcy4"));
+					m.setSfzh_jtcy4(rs.getString("sfzh_jtcy4"));
+					m.setRel4(rs.getString("rel4"));
+					m.setRes4(rs.getString("res4"));
+					m.setBody4(rs.getString("body4"));
+					m.setQx(rs.getString("qx"));
+					m.setJd(rs.getString("jd"));
+					m.setSq(rs.getString("sq"));
+					ms.add(m);
+				}
+
 			}
 			// 保存操作
 			TempfamilyinfoDTO tfdto = new TempfamilyinfoDTO();
@@ -124,7 +188,7 @@ public class TempApply extends HttpServlet {
 					+ " values "
 					+ " (XTJZ_ID.NEXTVAL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
 
-			PreparedStatement pst = conn.prepareStatement(sql_insert);
+			pst = conn.prepareStatement(sql_insert);
 			pst.setString(1, tfdto.getFamilyid());
 			pst.setString(2, tfdto.getFamilyno());
 			pst.setString(3, tfdto.getMasterid());
@@ -175,7 +239,7 @@ public class TempApply extends HttpServlet {
 			pst.setString(48, approveresult);
 			pst.setString(49, approveperson);
 			pst.setString(50, approveidea);
-			pst.setTimestamp(51, new Timestamp(new Date().getTime())); 
+			pst.setTimestamp(51, new Timestamp(new Date().getTime()));
 			pst.setString(52, "");
 			pst.setString(53, "");
 			pst.setString(54, "");
@@ -194,29 +258,35 @@ public class TempApply extends HttpServlet {
 			pst.setString(66, applymoney);
 			int i = pst.executeUpdate();
 			JSONObject json = new JSONObject();
-			if(i>0){
+			if (i > 0) {
 				json.put("success", "成功！");
 				json.put("result", "1");
-			}else{
+			} else {
 				json.put("success", "失败！");
 				json.put("result", "0");
 			}
 			response.setContentType("application/x-json");// 需要设置ContentType,为"application/x-json"
 			PrintWriter pw = response.getWriter();
 			pw.write(json.toString());
-			
-			rs.close();
-			ps.close();
-			pst.close();
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			if (null != conn) {
-				try {
-					JdbcConnection.closeConnection();
-				} catch (SQLException e) {
-					e.printStackTrace();
+			try {
+				if (null != rs) {
+					rs.close();
 				}
+				if (null != ps) {
+					ps.close();
+				}
+				if (null != pst) {
+					pst.close();
+				}
+				if (null != conn) {
+					JdbcConnection.closeConnection();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
 		}
 	}
