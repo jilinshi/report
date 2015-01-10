@@ -74,6 +74,7 @@ public class TempJzDTO {
 	private String updatetime;
 	private String approvemoney;
 	private String applymoney;
+	private String onno;
 	public String getFamilyid() {
 		return familyid;
 	}
@@ -501,6 +502,12 @@ public class TempJzDTO {
 	}
 	public void setApplymoney(String applymoney) {
 		this.applymoney = applymoney;
+	}
+	public String getOnno() {
+		return onno;
+	}
+	public void setOnno(String onno) {
+		this.onno = onno;
 	}
 	
 	

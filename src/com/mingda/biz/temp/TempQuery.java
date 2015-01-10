@@ -142,6 +142,7 @@ public class TempQuery extends HttpServlet {
 					m.setQx(rs.getString("qx"));
 					m.setJd(rs.getString("jd"));
 					m.setSq(rs.getString("sq"));
+					m.setOnno(onno);
 					m.setApproveresult1(rs.getString("approveresult1"));
 					if ("1".equals(rs.getString("approveresult1"))) {
 						m.setApproveresult1txt("ЭЌвт");
