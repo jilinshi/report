@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +105,19 @@ public class TempApplyQuery extends HttpServlet {
 					}
 
 				}
+				//查询是否有未审批的业务
+		    	String sql_jz = "select count(*) as sum from temp_jz tj where tj.paperid='"+ paperid +"' and tj.on_no like '"+onno+"%' and tj.approvegoto='2' and tj.approveresult1='1' ";
+		    	Statement ps_jz=conn.createStatement();
+			    ResultSet rs_jz=ps.executeQuery(sql_jz);
+			    int sum_jz=0;
+			    while(rs_jz.next()){
+			    	sum_jz = Integer.parseInt(rs_jz.getString("sum"));
+			    }
+			    if(sum_jz>0){
+			    	request.setAttribute("flag", "0");
+			    }else{
+			    	request.setAttribute("flag", "1");
+			    }
 				JSONObject json = new JSONObject();
 				JSONArray jsArr = JSONArray.fromObject(ms);
 				json.put("rows", jsArr.toString());

@@ -85,6 +85,8 @@
             	if(result=="1"){
             		$.messager.alert('消息','申请成功！');
             		$('#win_app').window('close');
+					$('#aa')[0].disabled=true;
+					$('#aa')[0].value="不能重复申请！";
             	}else{
             		$.messager.alert('消息','申请失败！');
             	}
@@ -276,10 +278,17 @@ $('#list_querydata').datagrid({
 				 {field:'percount',title:'家庭人口数',width:'80'},
 				 {field:'salcount',title:'受助人口数',width:'80'},
 				 {field:'onallname',title:'地址',width:'400'},
-				 {field:'opt',title:'操作',align:'center',width:'180',
+				 {field:'opt',title:'操作',align:'center',width:'280',
 	                   formatter:function(value,rec,index){
-	                       var d = '<a href="javascript:void(0)" onclick="apply(\''+ rec.familyid +'\')">申请</a> ';
-	                       d = d+ '&nbsp;&nbsp;&nbsp;&nbsp'
+	                	   var flag = <%=request.getAttribute("flag")%>;
+	                	   var a = "";
+	                	   if(flag==1){
+		                	   a = '<input type="button" id="aa" onclick="apply(\''+ rec.familyid +'\')" value="申请" ></input> ';
+	                	   }else{
+	                		   a = '<font color="red">不能申请，有未审批业务！</font>';
+	                	   }
+
+	                       var d = a+ '&nbsp;&nbsp;&nbsp;&nbsp'
 	                       + '<a href="javascript:void(0)" onclick="printapp(\''+ rec.ds +'\',\''+ rec.familyid +'\',\''+ rec.masterid +'\')">打印申请审批表</a> ';
 	                       return d;
 	                   }

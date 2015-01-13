@@ -44,17 +44,35 @@ public class TempApplyInit extends HttpServlet {
 		String paperid = request.getParameter("paperid");
 		JdbcConnection db = new JdbcConnection(ds);
 		Connection conn = null;
+		Statement ps = null;
+		ResultSet rs = null;
+		Statement ps_jz = null;
+		ResultSet rs_jz = null;
 		try {
 			response.setContentType("text/html;charset=UTF-8");
 			conn = db.getConnection();
 			String sql ="select count(*) as sum from tempfamiyinfo o where o.paperid='"+paperid+"' and o.on_no like '"+onno+"%' ";
-			Statement ps=conn.createStatement();
-		    ResultSet rs=ps.executeQuery(sql);
+			ps=conn.createStatement();
+		    rs=ps.executeQuery(sql);
 		    int sum = 0;
 		    while(rs.next()){
 		    	sum = Integer.parseInt(rs.getString("sum"));
 		    }
 		    if(sum>0){
+		    	//查询是否有未审批的业务
+		    	String sql_jz = "select count(*) as sum from temp_jz tj where tj.paperid='"+ paperid +"' and tj.on_no like '"+onno+"%' and tj.approvegoto='2' and tj.approveresult1='1' ";
+		    	ps_jz=conn.createStatement();
+			    rs_jz=ps_jz.executeQuery(sql_jz);
+			    int sum_jz=0;
+			    while(rs_jz.next()){
+			    	sum_jz = Integer.parseInt(rs_jz.getString("sum"));
+			    }
+			    if(sum_jz>0){
+			    	request.setAttribute("flag", "0");
+			    }else{
+			    	request.setAttribute("flag", "1");
+			    }
+		    	
 		    	request.setAttribute("msg", "");
 		    	request.setAttribute("p", paperid);
 		    	RequestDispatcher rd = request.getRequestDispatcher("/page/biz/applyview.jsp");
@@ -64,11 +82,17 @@ public class TempApplyInit extends HttpServlet {
 		    	RequestDispatcher rd = request.getRequestDispatcher("/page/biz/tempapply.jsp");
 				rd.forward(request, response);
 		    }
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			if (null != conn) {
 				try {
+				    rs.close();
+				    ps.close();
+				    rs_jz.close();
+				    ps_jz.close();
+				    conn.close();
 					JdbcConnection.closeConnection();
 				} catch (SQLException e) {
 					e.printStackTrace();
