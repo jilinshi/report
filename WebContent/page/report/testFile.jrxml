@@ -2,8 +2,8 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="testFile" pageWidth="595" pageHeight="842" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d08388d0-28f3-4e6f-a325-e6a938e65967">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
 	<property name="ireport.zoom" value="1.5"/>
-	<property name="ireport.x" value="5"/>
-	<property name="ireport.y" value="2609"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="1360"/>
 	<parameter name="fid" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -257,7 +257,7 @@
 				<text><![CDATA[姓名]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="161" width="90" height="30" uuid="d3766e63-3495-4136-8f68-f44f48972ee6">
+				<reportElement x="40" y="161" width="73" height="30" uuid="d3766e63-3495-4136-8f68-f44f48972ee6">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -291,7 +291,7 @@
 				<text><![CDATA[性别]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="130" y="161" width="100" height="30" uuid="ad1f8267-c019-4f08-9a25-fff97e9c78b6">
+				<reportElement x="113" y="161" width="127" height="30" uuid="ad1f8267-c019-4f08-9a25-fff97e9c78b6">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -356,7 +356,7 @@
 				<textFieldExpression><![CDATA[$F{FMAGE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="230" y="161" width="80" height="30" uuid="90e2c641-1058-4cd3-8ee5-402cb427a51b">
+				<reportElement x="240" y="161" width="70" height="30" uuid="90e2c641-1058-4cd3-8ee5-402cb427a51b">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -373,7 +373,7 @@
 				<text><![CDATA[保障编号]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="131" width="30" height="30" uuid="6b8cf3a5-3ebd-4299-b672-e8e1202404c0">
+				<reportElement x="310" y="131" width="50" height="30" uuid="6b8cf3a5-3ebd-4299-b672-e8e1202404c0">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -406,7 +406,7 @@
 				<textFieldExpression><![CDATA[$F{FAMILYNO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="340" y="131" width="134" height="30" uuid="af95e7df-098d-49b8-9537-3f07fe848103">
+				<reportElement x="360" y="131" width="114" height="30" uuid="af95e7df-098d-49b8-9537-3f07fe848103">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -421,7 +421,7 @@
 				<textFieldExpression><![CDATA[$F{PAPERID}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="40" y="191" width="90" height="30" uuid="60400bd3-d64f-4472-a536-3cb3e07d40ef">
+				<reportElement x="40" y="191" width="73" height="30" uuid="60400bd3-d64f-4472-a536-3cb3e07d40ef">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -452,7 +452,7 @@
 				<text><![CDATA[家庭成员情况]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="221" width="90" height="30" uuid="fe53e052-c2f2-4853-a0a1-aadb62a8e22a">
+				<reportElement x="40" y="221" width="73" height="30" uuid="fe53e052-c2f2-4853-a0a1-aadb62a8e22a">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -469,7 +469,7 @@
 				<text><![CDATA[与户主关系]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="40" y="251" width="90" height="30" uuid="cf04b790-ccd0-4e99-acd2-793a4fd7b0c8">
+				<reportElement x="40" y="251" width="73" height="30" uuid="cf04b790-ccd0-4e99-acd2-793a4fd7b0c8">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -485,7 +485,7 @@
 				<textFieldExpression><![CDATA[($F{REL1}==null) ? "":$F{REL1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="130" y="221" width="70" height="30" uuid="18b3df11-0bec-47b6-b99a-40eb4852afdd">
+				<reportElement x="113" y="221" width="54" height="30" uuid="18b3df11-0bec-47b6-b99a-40eb4852afdd">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -502,7 +502,7 @@
 				<text><![CDATA[姓名]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="130" y="251" width="70" height="30" uuid="052810fc-f749-4678-900e-d6abc414df3f">
+				<reportElement x="113" y="251" width="54" height="30" uuid="052810fc-f749-4678-900e-d6abc414df3f">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -518,7 +518,7 @@
 				<textFieldExpression><![CDATA[($F{XM_JTCY1}==null) ? "":$F{XM_JTCY1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="200" y="221" width="110" height="30" uuid="1a43f8d7-4bbe-4d11-9451-22a119c9a968">
+				<reportElement x="167" y="221" width="103" height="30" uuid="1a43f8d7-4bbe-4d11-9451-22a119c9a968">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -535,7 +535,7 @@
 				<text><![CDATA[证件号码]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="200" y="251" width="110" height="30" uuid="b868b694-bd8b-4392-bdef-5dc0b4560b47">
+				<reportElement x="167" y="251" width="103" height="30" uuid="b868b694-bd8b-4392-bdef-5dc0b4560b47">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -551,7 +551,7 @@
 				<textFieldExpression><![CDATA[($F{SFZH_JTCY1}==null) ? "":$F{SFZH_JTCY1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="310" y="221" width="80" height="30" uuid="43fffca1-497c-418a-b221-0ee21b9cc9d3">
+				<reportElement x="270" y="221" width="80" height="30" uuid="43fffca1-497c-418a-b221-0ee21b9cc9d3">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -568,7 +568,7 @@
 				<text><![CDATA[从事职业或工作]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="310" y="251" width="80" height="30" uuid="3d0e493b-b270-4185-b6fc-10a4ba7178d7">
+				<reportElement x="270" y="251" width="80" height="30" uuid="3d0e493b-b270-4185-b6fc-10a4ba7178d7">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -584,7 +584,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="390" y="221" width="39" height="30" uuid="b0747480-d22e-47fc-8df0-6b20cb032c7d">
+				<reportElement x="350" y="221" width="57" height="30" uuid="b0747480-d22e-47fc-8df0-6b20cb032c7d">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -603,7 +603,7 @@
 				<text><![CDATA[收入情况]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="390" y="251" width="39" height="30" uuid="955c5972-2e8f-4a4e-acc5-d5fa17d7bdc5">
+				<reportElement x="350" y="251" width="57" height="30" uuid="955c5972-2e8f-4a4e-acc5-d5fa17d7bdc5">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -619,7 +619,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="429" y="221" width="45" height="30" uuid="e987e3a8-8303-49fe-a7f7-a5280fe4513b">
+				<reportElement x="407" y="221" width="67" height="30" uuid="e987e3a8-8303-49fe-a7f7-a5280fe4513b">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -638,7 +638,7 @@
 				<text><![CDATA[户口性质]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="429" y="251" width="45" height="30" uuid="6bfe2a20-ae99-4a5d-ad9e-b01e7b941c8c">
+				<reportElement x="407" y="251" width="67" height="30" uuid="6bfe2a20-ae99-4a5d-ad9e-b01e7b941c8c">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -735,7 +735,7 @@
 				<textFieldExpression><![CDATA[($F{BODY4}==null)?"":$F{BODY4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="429" y="341" width="45" height="30" uuid="786dd024-0c5d-4e3d-ac14-b143f614f070">
+				<reportElement x="407" y="341" width="67" height="30" uuid="786dd024-0c5d-4e3d-ac14-b143f614f070">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -751,7 +751,7 @@
 				<textFieldExpression><![CDATA[($F{RES4}==null)?"":$F{RES4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="429" y="311" width="45" height="30" uuid="d12bfb80-04d8-4b40-899f-9a5f8dab09ab">
+				<reportElement x="407" y="311" width="67" height="30" uuid="d12bfb80-04d8-4b40-899f-9a5f8dab09ab">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -767,7 +767,7 @@
 				<textFieldExpression><![CDATA[($F{RES3}==null)?"":$F{RES3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="429" y="281" width="45" height="30" uuid="e446133c-e0f2-4a95-9eba-540333beb557">
+				<reportElement x="407" y="281" width="67" height="30" uuid="e446133c-e0f2-4a95-9eba-540333beb557">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -783,7 +783,7 @@
 				<textFieldExpression><![CDATA[($F{RES2}==null)?"":$F{RES2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="390" y="281" width="39" height="30" uuid="467df730-2d08-47a5-b390-ecdf50d36e2b">
+				<reportElement x="350" y="281" width="57" height="30" uuid="467df730-2d08-47a5-b390-ecdf50d36e2b">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -799,7 +799,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="390" y="311" width="39" height="30" uuid="625b6233-6022-4a71-ac93-850e13c84be1">
+				<reportElement x="350" y="311" width="57" height="30" uuid="625b6233-6022-4a71-ac93-850e13c84be1">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -815,7 +815,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="390" y="341" width="39" height="30" uuid="8b008261-f638-4620-9795-eb9b510d92a1">
+				<reportElement x="350" y="341" width="57" height="30" uuid="8b008261-f638-4620-9795-eb9b510d92a1">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -831,7 +831,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="310" y="341" width="80" height="30" uuid="f8837796-b175-4c2e-89be-66ae184edcfb">
+				<reportElement x="270" y="341" width="80" height="30" uuid="f8837796-b175-4c2e-89be-66ae184edcfb">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -847,7 +847,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="310" y="311" width="80" height="30" uuid="d74d66b1-e3e6-419f-8527-6be3411b7138">
+				<reportElement x="270" y="311" width="80" height="30" uuid="d74d66b1-e3e6-419f-8527-6be3411b7138">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -863,7 +863,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="310" y="281" width="80" height="30" uuid="ef7a095a-6c79-4c4f-9798-8c29d9ae1858">
+				<reportElement x="270" y="281" width="80" height="30" uuid="ef7a095a-6c79-4c4f-9798-8c29d9ae1858">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -879,7 +879,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="200" y="281" width="110" height="30" uuid="8d2b0ec3-5f53-4177-ab48-b21f01954635">
+				<reportElement x="167" y="281" width="103" height="30" uuid="8d2b0ec3-5f53-4177-ab48-b21f01954635">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -895,7 +895,7 @@
 				<textFieldExpression><![CDATA[($F{SFZH_JTCY2}==null) ? "":$F{SFZH_JTCY2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="200" y="311" width="110" height="30" uuid="d031c931-9688-4873-bff9-7ae0cdee562d">
+				<reportElement x="167" y="311" width="103" height="30" uuid="d031c931-9688-4873-bff9-7ae0cdee562d">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -911,7 +911,7 @@
 				<textFieldExpression><![CDATA[($F{SFZH_JTCY3}==null) ? "":$F{SFZH_JTCY3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="200" y="341" width="110" height="30" uuid="58e11b28-6d39-493c-bb15-5c204f30f20d">
+				<reportElement x="167" y="341" width="103" height="30" uuid="58e11b28-6d39-493c-bb15-5c204f30f20d">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -927,7 +927,7 @@
 				<textFieldExpression><![CDATA[($F{SFZH_JTCY4}==null) ? "":$F{SFZH_JTCY4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="130" y="341" width="70" height="30" uuid="84748cda-c170-4f4d-beff-c82d8ecd1cc3">
+				<reportElement x="113" y="341" width="54" height="30" uuid="84748cda-c170-4f4d-beff-c82d8ecd1cc3">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -943,7 +943,7 @@
 				<textFieldExpression><![CDATA[($F{XM_JTCY4}==null) ? "":$F{XM_JTCY4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="130" y="311" width="70" height="30" uuid="37e59144-3328-45fd-bae0-b97c131bda90">
+				<reportElement x="113" y="311" width="54" height="30" uuid="37e59144-3328-45fd-bae0-b97c131bda90">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -959,7 +959,7 @@
 				<textFieldExpression><![CDATA[($F{XM_JTCY3}==null) ? "":$F{XM_JTCY3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="281" width="90" height="30" uuid="8c69d7a4-14fd-4284-9cb8-866ae878da22">
+				<reportElement x="40" y="281" width="73" height="30" uuid="8c69d7a4-14fd-4284-9cb8-866ae878da22">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -975,7 +975,7 @@
 				<textFieldExpression><![CDATA[($F{REL2}==null) ? "":$F{REL2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="311" width="90" height="30" uuid="0b0bde3e-a5f4-410d-b6c3-d22e28227799">
+				<reportElement x="40" y="311" width="73" height="30" uuid="0b0bde3e-a5f4-410d-b6c3-d22e28227799">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -991,7 +991,7 @@
 				<textFieldExpression><![CDATA[($F{REL3}==null) ? "":$F{REL3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="341" width="90" height="30" uuid="85b0a790-c3b7-4cb8-bc82-12010c88419b">
+				<reportElement x="40" y="341" width="73" height="30" uuid="85b0a790-c3b7-4cb8-bc82-12010c88419b">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1021,7 +1021,7 @@
 				<text><![CDATA[住房情况]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="371" width="90" height="30" uuid="dfde6ecc-fd19-4956-9798-f00d68f58695">
+				<reportElement x="40" y="371" width="73" height="30" uuid="dfde6ecc-fd19-4956-9798-f00d68f58695">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1038,7 +1038,7 @@
 				<text><![CDATA[自有/租借]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="401" width="90" height="30" uuid="2c32e1f7-9071-447d-a06a-144a9ab7c18a">
+				<reportElement x="40" y="401" width="73" height="30" uuid="2c32e1f7-9071-447d-a06a-144a9ab7c18a">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1055,7 +1055,7 @@
 				<text><![CDATA[房屋面积]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="130" y="401" width="55" height="30" uuid="8d84b47a-dcfb-4196-8d76-43f5aa249c24">
+				<reportElement x="113" y="401" width="34" height="30" uuid="8d84b47a-dcfb-4196-8d76-43f5aa249c24">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1071,7 +1071,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="130" y="371" width="70" height="30" uuid="0758e111-0447-4dda-b5cd-74886ac847c0">
+				<reportElement x="113" y="371" width="54" height="30" uuid="0758e111-0447-4dda-b5cd-74886ac847c0">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1087,7 +1087,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="200" y="371" width="50" height="30" uuid="1c879e03-38d1-4960-b3a5-ab871c9ed21c">
+				<reportElement x="167" y="371" width="52" height="30" uuid="1c879e03-38d1-4960-b3a5-ab871c9ed21c">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1104,7 +1104,7 @@
 				<text><![CDATA[产权人]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="200" y="401" width="50" height="30" uuid="7189e741-2ce1-48b1-b71e-9c4afe08f425">
+				<reportElement x="167" y="401" width="52" height="30" uuid="7189e741-2ce1-48b1-b71e-9c4afe08f425">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1121,7 +1121,7 @@
 				<text><![CDATA[月租金]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="250" y="371" width="60" height="30" uuid="f5f42c50-aec8-4fbb-8636-1cfb1c7d29d0">
+				<reportElement x="219" y="371" width="51" height="30" uuid="f5f42c50-aec8-4fbb-8636-1cfb1c7d29d0">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1137,7 +1137,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="295" y="401" width="14" height="30" uuid="9556f93c-c41a-44ac-9c57-3f6a91b4a2b2">
+				<reportElement x="256" y="401" width="14" height="30" uuid="9556f93c-c41a-44ac-9c57-3f6a91b4a2b2">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1154,7 +1154,7 @@
 				<text><![CDATA[元]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="371" width="119" height="30" uuid="59829c1c-ab80-440c-a8cd-5559c150c756">
+				<reportElement x="270" y="371" width="137" height="30" uuid="59829c1c-ab80-440c-a8cd-5559c150c756">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1171,7 +1171,7 @@
 				<text><![CDATA[户主与产权人关系]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="401" width="119" height="30" uuid="a12737e0-c87d-4e75-ba32-5b62330eb94f">
+				<reportElement x="270" y="401" width="137" height="30" uuid="a12737e0-c87d-4e75-ba32-5b62330eb94f">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1188,7 +1188,7 @@
 				<text><![CDATA[房主联系电话]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="429" y="371" width="117" height="30" uuid="86d37df9-f6c3-4100-938e-6939fe433ca2">
+				<reportElement x="407" y="371" width="139" height="30" uuid="86d37df9-f6c3-4100-938e-6939fe433ca2">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1204,7 +1204,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="429" y="401" width="117" height="30" uuid="022544f5-cdf2-4e5f-b796-317879ffc9e4">
+				<reportElement x="407" y="401" width="139" height="30" uuid="022544f5-cdf2-4e5f-b796-317879ffc9e4">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1273,7 +1273,7 @@
 				<text><![CDATA[基 本 信 息]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="250" y="401" width="45" height="30" uuid="bc3a9e4e-aae7-4336-ad2a-35904b06a827">
+				<reportElement x="219" y="401" width="37" height="30" uuid="bc3a9e4e-aae7-4336-ad2a-35904b06a827">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1289,7 +1289,7 @@
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="185" y="401" width="14" height="30" uuid="6a6469d4-b4d2-4271-96b8-07a68e5f7614">
+				<reportElement x="147" y="401" width="10" height="30" uuid="6a6469d4-b4d2-4271-96b8-07a68e5f7614">
 					<property name="local_mesure_unitwidth" value="pixel"/>
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
@@ -1303,10 +1303,10 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[m2]]></text>
+				<text><![CDATA[m]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="130" y="191" width="69" height="30" uuid="75325fe6-ff79-4431-86af-c7dc64f0056a">
+				<reportElement x="113" y="191" width="73" height="30" uuid="75325fe6-ff79-4431-86af-c7dc64f0056a">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1321,7 +1321,7 @@
 				<textFieldExpression><![CDATA[$F{QX}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="199" y="191" width="81" height="30" uuid="df56b4aa-c2ef-4dc6-b1fa-7ea5e555cec1">
+				<reportElement x="186" y="191" width="82" height="30" uuid="df56b4aa-c2ef-4dc6-b1fa-7ea5e555cec1">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1331,7 +1331,7 @@
 				<textFieldExpression><![CDATA[$F{JD}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="280" y="191" width="48" height="30" uuid="960b2536-dcda-4fd2-8345-d8059e298233">
+				<reportElement x="268" y="191" width="60" height="30" uuid="960b2536-dcda-4fd2-8345-d8059e298233">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1380,7 +1380,7 @@
 				<imageExpression><![CDATA[$P{onepic}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="130" y="281" width="70" height="30" uuid="51e03dc9-1ed5-4c83-bad4-469782d66d54">
+				<reportElement x="113" y="281" width="54" height="30" uuid="51e03dc9-1ed5-4c83-bad4-469782d66d54">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1395,19 +1395,38 @@
 				</textElement>
 				<textFieldExpression><![CDATA[($F{XM_JTCY2}==null) ? "":$F{XM_JTCY2}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="157" y="381" width="10" height="50" uuid="a72d4d5d-60bc-4055-99c4-b0340ae51f7d">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="11" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[
+2]]></text>
+			</staticText>
 		</band>
-		<band height="740">
+		<band height="752">
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="-1" y="30" width="555" height="60" uuid="24d10b46-c1c0-4b6a-ad30-24ea2d2e9d98"/>
+				<reportElement x="-1" y="30" width="555" height="52" uuid="24d10b46-c1c0-4b6a-ad30-24ea2d2e9d98"/>
 				<textElement>
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" x="10" y="91" width="60" height="134" uuid="1a35b32a-c028-4990-980a-67e3bd5c8b91">
+				<reportElement positionType="Float" x="1" y="82" width="60" height="143" uuid="1a35b32a-c028-4990-980a-67e3bd5c8b91">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1424,7 +1443,7 @@
 				<text><![CDATA[村(居)民委员会意见]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="91" width="476" height="134" uuid="713a065f-d3f9-493f-8eb1-aaf16c587df2"/>
+				<reportElement x="61" y="82" width="493" height="143" uuid="713a065f-d3f9-493f-8eb1-aaf16c587df2"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1435,15 +1454,15 @@
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[	经调查，该家庭总人口	人，家庭月总收入		元，月人均收入		元。
-	因			申请救助，有材料证明，符合临时救助条件，同意上报此乡镇（街道）社会救助服务中心。
+				<text><![CDATA[         经调查，该家庭总人口		人，家庭月总收入		元，月人均收入		元。
+         因			申请临时救助，符合临时救助条件，同意上报乡镇（街道）社会救助服务中心。
 
-		经办人（签字）：			负责人（签字）：
+		经办人（签字）：				负责人（签字）：
 
-		村（居）民委员会（盖章）：	日期：		年	月	日]]></text>
+		村（居）民委员会（盖章）：		日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="225" width="476" height="130" uuid="7e3cd05c-d97a-4228-9ac2-68b9b1860a67"/>
+				<reportElement x="61" y="225" width="493" height="130" uuid="7e3cd05c-d97a-4228-9ac2-68b9b1860a67"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1453,14 +1472,14 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[	经审核，该家庭符合临时救助条件，建议给予该家庭临时救助		元，同意上报区社会救助事业中心。
+				<text><![CDATA[         经审核，该家庭符合临时救助条件，建议给予该家庭临时救助		元，同意上报区社会救助事业中心。
 
-		经办人（签字）：			负责人（签字）：
+		经办人（签字）：				负责人（签字）：
 
-乡镇（街道）社会救助服务中心（盖章）：	日期：		年	月	日]]></text>
+乡镇（街道）社会救助服务中心（盖章）：		日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="225" width="60" height="130" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
+				<reportElement x="1" y="225" width="60" height="130" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1474,7 +1493,7 @@
 				<text><![CDATA[乡镇(街道)社会救助服务中心意见]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="355" width="60" height="109" uuid="703e856f-b3fe-472a-b6f0-b9bd96cb6f18">
+				<reportElement x="1" y="355" width="60" height="109" uuid="703e856f-b3fe-472a-b6f0-b9bd96cb6f18">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1491,7 +1510,7 @@
 				<text><![CDATA[区社会救助事业中心意见]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="355" width="476" height="109" uuid="b0e68fd0-c7d8-4e12-80fb-839c4a411269"/>
+				<reportElement x="61" y="355" width="493" height="109" uuid="b0e68fd0-c7d8-4e12-80fb-839c4a411269"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1501,14 +1520,14 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[	经审核，该家庭符合临时救助条件，同意给予该家庭临时救助		元。
+				<text><![CDATA[         经审核，该家庭符合临时救助条件，同意给予该家庭临时救助		元。
 
-		经办人（签字）：			负责人（签字）：
+		经办人（签字）：				负责人（签字）：
 
-	区社会救助事业中心（盖章）：		日期：		年	月	日]]></text>
+	区社会救助事业中心（盖章）：			日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="573" width="60" height="167" uuid="9bcfcefd-f17f-409b-be82-01612c5992ec">
+				<reportElement x="1" y="583" width="60" height="167" uuid="9bcfcefd-f17f-409b-be82-01612c5992ec">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1525,7 +1544,7 @@
 				<text><![CDATA[申请人领取临时救助情况]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="573" width="476" height="167" uuid="cb0aac86-585a-47e2-b5cc-b52f2ff2d7eb"/>
+				<reportElement x="61" y="583" width="493" height="167" uuid="cb0aac86-585a-47e2-b5cc-b52f2ff2d7eb"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1535,18 +1554,19 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[	本人已通过		（现场/银行）领取临时救助		元。
+				<text><![CDATA[         本人已通过		（现场/银行）领取临时救助		元。
 
-申请人或受委托人签字（盖章）：		领取日期：		年	月	日
+申请人或受委托人签字（盖章）：			领取日期：		年	月	日
 
 
+         临时救助申请人账户信息：
 
-	临时救助申请人账户信息：
+         开户行名称：			银行账号：
 
-账户名：		账号：				联系电话：]]></text>
+         账户名：				联系电话：]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="464" width="60" height="109" uuid="dc4ca73e-4692-4093-8b08-8d0e14223290">
+				<reportElement x="1" y="464" width="60" height="119" uuid="dc4ca73e-4692-4093-8b08-8d0e14223290">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1563,7 +1583,7 @@
 				<text><![CDATA[区民政局资金审批小组意见]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="464" width="476" height="109" uuid="bd497f23-7d93-4654-8077-3808a7cc9cc5"/>
+				<reportElement x="61" y="464" width="493" height="119" uuid="bd497f23-7d93-4654-8077-3808a7cc9cc5"/>
 				<box>
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="1.0"/>
@@ -1573,21 +1593,21 @@
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
-				<text><![CDATA[	经局资金审批小组评议，同意给予		临时救助，救助金额		元。
+				<text><![CDATA[         经局资金审批小组评议，同意给予		临时救助，救助金额		元。
 
 		审批小组成员（签字）：
 
-							日期：		年	月	日]]></text>
+								日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="70" y="648" width="476" height="20" uuid="1665e59b-1bae-4e2d-93dc-b28cfb29a972"/>
+				<reportElement x="61" y="648" width="494" height="20" uuid="1665e59b-1bae-4e2d-93dc-b28cfb29a972"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="宋体" size="15" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="243" y="95" width="27" height="20" uuid="115212df-7a49-45a6-b541-ab544cf2b436"/>
+				<reportElement x="219" y="91" width="78" height="20" uuid="115212df-7a49-45a6-b541-ab544cf2b436"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1601,7 +1621,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="379" y="95" width="50" height="20" uuid="e5541987-3aa2-4faa-b3c3-fb3053912e32"/>
+				<reportElement x="410" y="90" width="50" height="20" uuid="e5541987-3aa2-4faa-b3c3-fb3053912e32"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1615,7 +1635,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="77" y="110" width="72" height="20" uuid="049c84c3-2877-4963-a141-216bb8bf6e8a"/>
+				<reportElement x="61" y="104" width="79" height="20" uuid="049c84c3-2877-4963-a141-216bb8bf6e8a"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1629,7 +1649,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="127" y="124" width="102" height="20" uuid="5af9f96d-55f6-4091-95dc-caf315f1e112"/>
+				<reportElement x="103" y="121" width="118" height="20" uuid="5af9f96d-55f6-4091-95dc-caf315f1e112"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1643,7 +1663,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="472" y="241" width="38" height="20" uuid="85270ead-1e98-4cb1-a1c5-927dda533339"/>
+				<reportElement x="445" y="241" width="101" height="20" uuid="85270ead-1e98-4cb1-a1c5-927dda533339"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1657,7 +1677,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="472" y="369" width="38" height="20" uuid="699c3890-5363-45d5-bfee-419a2549f867"/>
+				<reportElement x="445" y="362" width="101" height="20" uuid="699c3890-5363-45d5-bfee-419a2549f867"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1671,7 +1691,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="473" y="478" width="37" height="20" uuid="b1423e5f-0458-4b1a-a877-1f15490c7812"/>
+				<reportElement x="499" y="475" width="47" height="20" uuid="b1423e5f-0458-4b1a-a877-1f15490c7812"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1685,7 +1705,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="311" y="478" width="39" height="20" uuid="bdf071e7-135d-4b57-9d1f-71cbfd3e294a"/>
+				<reportElement x="280" y="475" width="98" height="20" uuid="bdf071e7-135d-4b57-9d1f-71cbfd3e294a"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1699,7 +1719,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="177" y="587" width="62" height="20" uuid="c6c5d6df-6560-43f2-b012-98cb3c937036"/>
+				<reportElement x="150" y="588" width="118" height="20" uuid="c6c5d6df-6560-43f2-b012-98cb3c937036"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1713,7 +1733,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="397" y="587" width="74" height="20" uuid="ed072fd5-98cb-4bf9-951b-95f25d8e2e54"/>
+				<reportElement x="429" y="589" width="70" height="20" uuid="ed072fd5-98cb-4bf9-951b-95f25d8e2e54"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1839,42 +1859,42 @@
 				<text><![CDATA[10、_____________________________________________				___________________页]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="80" y="511" width="400" height="30" uuid="5f193dfe-9ea3-4009-bd24-dbda87ba79dc"/>
+				<reportElement x="80" y="518" width="400" height="30" uuid="5f193dfe-9ea3-4009-bd24-dbda87ba79dc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[总    计：粘贴材料个数：________；粘贴材料页数：________。]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="564" width="510" height="30" uuid="548c0638-47af-4c50-82de-3cfecbba10d0"/>
+				<reportElement x="20" y="575" width="510" height="30" uuid="548c0638-47af-4c50-82de-3cfecbba10d0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[证明材料存档说明]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="594" width="510" height="20" uuid="38041d2c-96a7-4919-8f14-9db36df5b1a3"/>
+				<reportElement x="20" y="610" width="510" height="20" uuid="38041d2c-96a7-4919-8f14-9db36df5b1a3"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[1.申请书（主要写明家庭实际情况及申请理由）；]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="614" width="510" height="20" uuid="c2cc4fc0-9080-45ba-a658-512c919280e8"/>
+				<reportElement x="20" y="630" width="510" height="20" uuid="c2cc4fc0-9080-45ba-a658-512c919280e8"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[2.申请家庭户口本和家庭成员身份证复印件；]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="634" width="510" height="30" uuid="e86c28de-1dad-4db9-b3bb-2260a433c036"/>
+				<reportElement x="20" y="650" width="510" height="30" uuid="e86c28de-1dad-4db9-b3bb-2260a433c036"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[3.申请家庭出具的疾病诊断、医疗票据、交通事故伤害鉴定、因火灾等突发性意外事件证明、学生在校证明等证明材料的复印件存档；]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="664" width="510" height="20" uuid="179eae6d-4a6e-443d-a2ab-cbe7aac16d52">
+				<reportElement x="20" y="680" width="510" height="20" uuid="179eae6d-4a6e-443d-a2ab-cbe7aac16d52">
 					<property name="local_mesure_unitheight" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -1884,14 +1904,14 @@
 				<text><![CDATA[4.城市低收入家庭申请应急救助时，应将区民政部门出具的《吉林市城市低收入家庭证明》复印件存档；]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="684" width="510" height="20" uuid="2063d10a-d366-4eaf-a39c-88e506fd8a39"/>
+				<reportElement x="20" y="700" width="510" height="20" uuid="2063d10a-d366-4eaf-a39c-88e506fd8a39"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[5.由乡镇（街道）出具的突发性、临时性困难的证明材料；]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="704" width="510" height="20" uuid="8fd4477c-7f66-4d1d-a184-83f9e59b2251"/>
+				<reportElement x="20" y="720" width="510" height="20" uuid="8fd4477c-7f66-4d1d-a184-83f9e59b2251"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
