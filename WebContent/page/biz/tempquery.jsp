@@ -66,7 +66,7 @@
 							 {field:'opt',title:'操作',align:'center', width:'80',
 				                   formatter:function(value,rec,index){
 				                       var d = '<a href="javascript:void(0)" onclick="viewinfo(\''+ rec.tjzId +'\')">查看</a> ';
-				                       if(rec.onno.length==6){
+				                       if(rec.onno.length==4){
 				                    	  d = d+'<a href="javascript:void(0)" onclick="cancel(\''+ rec.tjzId +'\')">作废</a> ';
 				                       }
 				                       return d;

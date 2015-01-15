@@ -68,7 +68,7 @@ public class TempApproveEndQuery extends HttpServlet {
 				}else{
 					jwhere = jwhere + " and o.familyno='"+familyno+"' ";
 				}
-				String sql ="select * from temp_jz o where 1=1 and o.approvegoto ='2' " + jwhere;
+				String sql ="select * from temp_jz o where 1=1 and o.approvegoto ='2' and o.approveresult1 = '1' " + jwhere;
 				Statement ps=conn.createStatement();
 			    ResultSet rs=ps.executeQuery(sql);
 			    while(rs.next())

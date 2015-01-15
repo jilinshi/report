@@ -292,13 +292,17 @@
      	var approvemoney = document.getElementById("approvemoney").value;
      	
      	//验证
-    	if(approvemoney==""){
-    		$.messager.alert('提示','请输入救助金额！');
-    		return;
-    	}else if(!isNumber(approvemoney)){
-    		$.messager.alert('提示','救助金额，请输入阿拉伯数字！');
-    		return;
-    	}
+     	if(approveresult==1){
+	    	if(approvemoney==""){
+	    		$.messager.alert('提示','请输入救助金额！');
+	    		return;
+	    	}else if(!isNumber(approvemoney)){
+	    		$.messager.alert('提示','救助金额，请输入阿拉伯数字！');
+	    		return;
+	    	}
+     	}else{
+     		approvemoney = 0;
+     	}
     	if(approveperson==""){
     		$.messager.alert('提示','请输入审批人！');
     		return;
@@ -322,6 +326,7 @@
             	if(result=="1"){
             		$.messager.alert('消息','审批成功！');
             		$('#win_app').window('close');
+            		submitForm();
             	}else{
             		$.messager.alert('消息','审批失败！');
             	}

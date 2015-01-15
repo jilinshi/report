@@ -45,15 +45,18 @@
    	     	approveresult=approveresultname[i].value;
      	}
      	var applymoney = document.getElementById("applymoney").value;
-     	
-    	//验证
-    	if(applymoney==""){
-    		$.messager.alert('提示','请输入拟救助金额！');
-    		return;
-    	}else if(!isNumber(applymoney)){
-    		$.messager.alert('提示','拟救助金额，请输入阿拉伯数字！');
-    		return;
-    	}
+     	if(approveresult==1){
+	    	//验证
+	    	if(applymoney==""){
+	    		$.messager.alert('提示','请输入拟救助金额！');
+	    		return;
+	    	}else if(!isNumber(applymoney)){
+	    		$.messager.alert('提示','拟救助金额，请输入阿拉伯数字！');
+	    		return;
+	    	}
+     	}else{
+     		applymoney = 0;
+     	}
     	if(approveidea==""){
     		$.messager.alert('提示','请输入走访记录！');
     		return;
@@ -84,9 +87,13 @@
             	var result =jsonObj["result"];
             	if(result=="1"){
             		$.messager.alert('消息','申请成功！');
+            		$('#app').form('clear');
             		$('#win_app').window('close');
-					$('#aa')[0].disabled=true;
-					$('#aa')[0].value="不能重复申请！";
+					if(approveresult==1){
+	            		$('#aa')[0].disabled=true;
+						$('#aa')[0].value="不能重复申请！";
+					}
+					
             	}else{
             		$.messager.alert('消息','申请失败！');
             	}
