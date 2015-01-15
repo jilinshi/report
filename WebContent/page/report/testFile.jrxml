@@ -3,7 +3,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="temp_cs"/>
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="1360"/>
+	<property name="ireport.y" value="2878"/>
 	<parameter name="fid" class="java.lang.String">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -1451,15 +1451,16 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[         经调查，该家庭总人口		人，家庭月总收入		元，月人均收入		元。
+
          因			申请临时救助，符合临时救助条件，同意上报乡镇（街道）社会救助服务中心。
 
 		经办人（签字）：				负责人（签字）：
 
-		村（居）民委员会（盖章）：		日期：		年	月	日]]></text>
+		村（居）民委员会（盖章）：			日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="61" y="225" width="493" height="130" uuid="7e3cd05c-d97a-4228-9ac2-68b9b1860a67"/>
@@ -1470,13 +1471,13 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[         经审核，该家庭符合临时救助条件，建议给予该家庭临时救助		元，同意上报区社会救助事业中心。
 
 		经办人（签字）：				负责人（签字）：
 
-乡镇（街道）社会救助服务中心（盖章）：		日期：		年	月	日]]></text>
+乡镇（街道）社会救助服务中心（盖章）：			日期：		年	月	日]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="1" y="225" width="60" height="130" uuid="e36a20cb-2df9-41a6-b633-221e00fb9e7e"/>
@@ -1518,7 +1519,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[         经审核，该家庭符合临时救助条件，同意给予该家庭临时救助		元。
 
@@ -1552,7 +1553,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[         本人已通过		（现场/银行）领取临时救助		元。
 
@@ -1591,7 +1592,7 @@
 					<rightPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="宋体" size="13" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+					<font fontName="宋体" size="12" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<text><![CDATA[         经局资金审批小组评议，同意给予		临时救助，救助金额		元。
 
@@ -1607,7 +1608,7 @@
 				<text><![CDATA[--------------------------------------------------------------------------------------------------------------------------]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="219" y="91" width="78" height="20" uuid="115212df-7a49-45a6-b541-ab544cf2b436"/>
+				<reportElement x="209" y="89" width="91" height="20" uuid="115212df-7a49-45a6-b541-ab544cf2b436"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1621,7 +1622,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="410" y="90" width="50" height="20" uuid="e5541987-3aa2-4faa-b3c3-fb3053912e32"/>
+				<reportElement x="400" y="89" width="60" height="20" uuid="e5541987-3aa2-4faa-b3c3-fb3053912e32"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1635,7 +1636,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="61" y="104" width="79" height="20" uuid="049c84c3-2877-4963-a141-216bb8bf6e8a"/>
+				<reportElement x="61" y="102" width="79" height="20" uuid="049c84c3-2877-4963-a141-216bb8bf6e8a"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1649,7 +1650,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="103" y="121" width="118" height="20" uuid="5af9f96d-55f6-4091-95dc-caf315f1e112"/>
+				<reportElement x="99" y="129" width="123" height="20" uuid="5af9f96d-55f6-4091-95dc-caf315f1e112"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1663,7 +1664,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="445" y="241" width="101" height="20" uuid="85270ead-1e98-4cb1-a1c5-927dda533339"/>
+				<reportElement x="407" y="245" width="95" height="20" uuid="85270ead-1e98-4cb1-a1c5-927dda533339"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1677,7 +1678,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="445" y="362" width="101" height="20" uuid="699c3890-5363-45d5-bfee-419a2549f867"/>
+				<reportElement x="407" y="372" width="95" height="20" uuid="699c3890-5363-45d5-bfee-419a2549f867"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1691,7 +1692,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="499" y="475" width="47" height="20" uuid="b1423e5f-0458-4b1a-a877-1f15490c7812"/>
+				<reportElement x="452" y="486" width="47" height="20" uuid="b1423e5f-0458-4b1a-a877-1f15490c7812"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1705,7 +1706,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="280" y="475" width="98" height="20" uuid="bdf071e7-135d-4b57-9d1f-71cbfd3e294a"/>
+				<reportElement x="268" y="486" width="73" height="20" uuid="bdf071e7-135d-4b57-9d1f-71cbfd3e294a"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1719,7 +1720,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="150" y="588" width="118" height="20" uuid="c6c5d6df-6560-43f2-b012-98cb3c937036"/>
+				<reportElement x="147" y="593" width="80" height="20" uuid="c6c5d6df-6560-43f2-b012-98cb3c937036"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
@@ -1733,7 +1734,7 @@
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="429" y="589" width="70" height="20" uuid="ed072fd5-98cb-4bf9-951b-95f25d8e2e54"/>
+				<reportElement x="370" y="594" width="51" height="20" uuid="ed072fd5-98cb-4bf9-951b-95f25d8e2e54"/>
 				<box bottomPadding="0">
 					<pen lineWidth="1.0" lineStyle="Solid"/>
 					<topPen lineWidth="0.0"/>
