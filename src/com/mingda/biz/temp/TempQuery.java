@@ -220,6 +220,9 @@ public class TempQuery extends HttpServlet {
 					map.put("qx", rs.getString("qx"));
 					map.put("jd", rs.getString("jd"));
 					map.put("sq", rs.getString("sq"));
+					map.put("approveend", m.getApproveendtxt());
+					map.put("approvemoney", rs.getString("approvemoney"));
+					
 					hm.add(map);
 				}
 				
@@ -232,6 +235,8 @@ public class TempQuery extends HttpServlet {
 				title.put("qx", "区县");
 				title.put("jd", "街道");
 				title.put("sq", "社区");
+				title.put("approveend", "审批状态");
+				title.put("approvemoney", "救助金额");
 				session.setAttribute("title", title);
 				JSONObject json = new JSONObject();
 				if (ms.size() > 0) {
