@@ -265,7 +265,11 @@ public class TempApply extends HttpServlet {
 				json.put("success", "失败！");
 				json.put("result", "0");
 			}
-			response.setContentType("application/x-json");// 需要设置ContentType,为"application/x-json"
+			response.setDateHeader("expires", 0);
+			response.setHeader("Cache-Control", "no-cache");
+			response.setHeader("pragma", "no-cache");
+			response.setContentType("text/html;charset=UTF-8");
+			request.setCharacterEncoding("UTF-8");
 			PrintWriter pw = response.getWriter();
 			pw.write(json.toString());
 

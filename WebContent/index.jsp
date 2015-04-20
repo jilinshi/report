@@ -14,7 +14,7 @@
 <body>
 <div style="padding: 100px 1000px 1000px 20px;">
 <table cellpadding="5" align="center"><tr><td>
-<a href="<%=request.getContextPath()%>/page/biz/tempapply.jsp?onno=220201&ds=nc&empid=222">临时救助申请（街道）</a>
+<a href="<%=request.getContextPath()%>/page/biz/tempapply.jsp?onno=220206&ds=nc&empid=222">临时救助申请（街道）</a>
 <br/>
 <%-- <br/>
 <a href="<%=request.getContextPath()%>/page/biz/tempapprove.jsp?onno=220201&ds=nc&empid=222">临时救助审批（街道）</a>
