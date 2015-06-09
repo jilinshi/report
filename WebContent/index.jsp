@@ -20,10 +20,10 @@
 <a href="<%=request.getContextPath()%>/page/biz/tempapprove.jsp?onno=220201&ds=nc&empid=222">临时救助审批（街道）</a>
 <br/> --%>
 <br/>
-<a href="<%=request.getContextPath()%>/page/biz/tempapproveend.jsp?onno=220201&ds=nc&empid=222">临时救助审批（区县）</a>
+<a href="<%=request.getContextPath()%>/page/biz/tempapproveend.jsp?onno=220206&ds=nc&empid=222">临时救助审批（区县）</a>
 <br/>
 <br/>
-<a href="<%=request.getContextPath()%>/page/biz/tempquery.jsp?onno=220201&ds=nc&empid=222">临时救助查询</a>
+<a href="<%=request.getContextPath()%>/page/biz/tempquery.jsp?onno=220206&ds=nc&empid=222">临时救助查询</a>
 </td></tr>
 </table>
 </div>
